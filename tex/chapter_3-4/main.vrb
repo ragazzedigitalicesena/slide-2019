@@ -1,0 +1,21 @@
+\frametitle{Caratteri di escape e uso di apici e virgolette}
+\begin{block}{Ultimi concetti}
+	\begin{itemize}
+		\item C'è un'altra cosa strana in una delle due \texttt{print()}... A cosa serve quel \textbackslash prima dell'apice tra \textit{That} e \textit{s}?
+		\item Viene usato, all'interno di stringhe, come \textbf{carattere di escape}
+		\item Cos'è un carattere di escape? Serve per poter stampare i caratteri speciali che hanno già un loro significato, come l'apice ('), che viene interpretato come inizio stringa
+		\item Vediamo ora cosa può permettere di stampare questo carattere di escape:
+	\end{itemize}
+\end{block}
+\begin{center}
+	\begin{tabular}{ c  c }
+		\hline
+		Carattere di escape & Cosa viene stampato \\
+		\hline
+		\textbackslash \textbackslash & Backslash (\textbackslash)  \\
+		\textbackslash ' & Apice(') \\
+		\textbackslash " & Doppie virgolette (")\\
+		\textbackslash n & Andata a capo\\
+		\textbackslash t & Tabulazione
+	\end{tabular}
+\end{center}
