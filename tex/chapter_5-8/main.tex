@@ -1,0 +1,99 @@
+\documentclass{beamer}
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{Madrid}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{beaver} % or try albatross, beaver, crane, ...
+  \usefonttheme{serif}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage{hyperref}
+\usepackage{tabu}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{pdfpages}
+\usepackage{framed, color}
+\definecolor{shadecolor}{rgb}{1,0.8,0.3}
+\usepackage{color}
+\usepackage[backend=bibtex, style=numeric,sorting=none]{biblatex}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\usepackage{listings}
+\lstset{language=Python,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+  frame=lrbt,xleftmargin=\fboxsep,xrightmargin=-\fboxsep
+}
+
+\title[Ragazze Digitali 2019]{Ragazze Digitali A.A. 2018/2019}
+\author{E. Salvucci - S. Gattucci - C. Varini}
+\date{}
+
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+\bibstyle{unsrt}
+\bibliography{bibliography.bib}
+
+\begin{document}
+
+\setbeamertemplate{background}
+{\includegraphics[width=\paperwidth,height=\paperheight]{images/ragazze_digitali.jpg}}
+\begin{frame}
+\end{frame}
+
+\setbeamertemplate{background}{}
+
+\begin{frame}{Cosa faremo oggi}
+\texttt{Ti trovi in una terra piena di draghi.\newline
+        Di fronte a te ci sono due grotte\newline
+        In una grotta si trova un drago simpatico e socievole che condividerà con te il suo tesoro.\newline
+        Nell'altra grotta c'è invece un drago affamato e vorace.\newline
+        Dentro quale grotta vuoi entrare? (1 o 2)\newline}
+\textbf{1\newline}
+\texttt{Entri nella caverna 1\newline
+        E' buia e spaventosa\newline
+        Un enorme drago compare all'improvviso davanti a te! Apre le sue fauci e... ti inghiottisce in un batter d'occhio!\newline
+        Vuoi giocare ancora?\newline}
+\textbf{No}        
+        
+\end{frame}
+
+\input{functions.tex}
+
+\input{local_and_global_variables.tex}
+
+\input{boolean_operators.tex}
+
+\input{while_loops.tex}
+
+\input{constants.tex}
+
+\input{lists.tex}
+
+\input{hangman_exercise.tex}
+
+\end{document}

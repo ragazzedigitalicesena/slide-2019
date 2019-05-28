@@ -1,0 +1,175 @@
+\section{Liste}
+
+\begin{frame}[fragile]
+\frametitle{Liste}
+    \begin{block}{Liste}
+Le liste sono delle variabili che, invece che contenere dei singoli valori ne contengono molteplici.
+    \end{block}
+    
+    \begin{lstlisting}
+teachers =  ['Chiara', 'Enrico', 'Sofia']
+answers = ['Si', 'No']
+vocals = ['a', 'e', 'i', 'o', 'u']
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Liste}
+    \begin{block}{Come leggiamo i valori di una lista}
+Pensiamo ad una lista come ad un mobile con dei cassetti numerati da 0 (primo cassetto) a lungezza della lista -1 (ultimo cassetto).
+
+! Attenzione, stiamo partendo da 0 !
+    \end{block}
+    
+    \begin{lstlisting}
+vocals = ['a', 'e', 'i', 'o', 'u']
+    \end{lstlisting}
+    
+        \begin{block}{}
+Per aprire i "cassetti" e leggere i singoli valori della lista quindi faremo
+    \end{block}
+
+    \begin{lstlisting}
+vocals[0] # Avra' valore 'a'
+vocals[1] # Avra' valore 'e'
+vocals[2] # ...
+vocals[3]
+vocals[4]
+    \end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Liste}
+    \begin{block}{Come scriviamo i valori di una lista}
+Similmente a come li leggiamo e a come assegnamo un valore ad una variabile normale.
+    \end{block}
+    
+    \begin{lstlisting}
+answers = ['Si', 'No']
+
+answers[0] = 'Yes' # Nella posizione 0 della lista scrivo 'Yes', sostituendolo al 'Si'
+    \end{lstlisting}
+
+    \begin{block}{append()}
+La funzione append() aggiunge valori ad una lista gia' definita
+    \end{block}
+
+    \begin{lstlisting}
+answers = ['Si', 'No']
+
+answers.append('Forse') # Ora answers avra' valori ['Si', 'No', 'Forse']
+    \end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Liste}
+    \begin{block}{Lista vuota}
+Adesso che conosciamo append() possiamo anche crearci delle lista vuote e all'occorrenza aggiungere valori
+    \end{block}
+    
+    \begin{lstlisting}
+answers = []
+answers.append('Si')
+answers.append('No')
+    \end{lstlisting}
+
+    \begin{block}{reverse()}
+La funzione reverse() inverte l'ordine degli elementi di una lista, modificando la lita stessa!
+
+! Si, la lista e' ordinata !
+    \end{block}
+
+    \begin{lstlisting}
+vocals = ['a', 'e', 'i', 'o', 'u']
+vocals.reverse() # ['u', 'o', 'i', 'e', 'a']
+    \end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Liste}
+    \begin{block}{split()}
+Un altra funzione utile e' split().
+Data una frase, un insieme di parole separate da spazi, split() restituisce una lista fatta dalle parole della frase stessa
+    \end{block}
+    
+    \begin{lstlisting}
+sentence = 'Oggi a Cesena nevica e fa un gran caldo'
+sentence.split()
+# ['Oggi', 'a', 'Cesena', 'nevica', 'e', 'fa', 'un', 'gran', 'caldo']
+splittedSentence = sentence.split()
+splittedSentence[3] # Quale valore avra'?
+    \end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Liste}
+    \begin{block}{Cosa succede se...}
+provo a leggere in una posizione maggiore della lunghezza della lista?
+    \end{block}
+    
+    \begin{lstlisting}
+vocals = ['a', 'e', 'i', 'o', 'u']
+print(vocals[999])
+print(vocals[10])
+    \end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Liste}
+    \begin{block}{Cosa succede se...}
+provo a leggere o scrivere in una posizione maggiore della lunghezza della lista?
+    \end{block}
+    
+    \begin{lstlisting}
+vocals = ['a', 'e', 'i', 'o', 'u']
+print(vocals[999])
+'vocals[9999]
+IndexError: list index out of range'
+
+vocals[10] = 'abcdefghi...'
+'IndexError: list assignment index out of range'
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Liste}
+    \begin{block}{range()}
+    La funzione range restituisce una lista di numeri interi compresi nell'intervallo specificato come parametro
+    \end{block}
+    
+    \begin{lstlisting}
+range(5) # [0, 1, 2, 3, 4]
+# Se non specifico il minimo parto da 0    
+range(0, 10) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+range(5, 10) # [5, 6, 7, 8, 9] ! Il 10 non c'e'
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Liste}
+    \begin{block}{list()}
+    La funzione list prende come parametro un valore e restituisce una lista fatta degli elementi che compongono il parametro
+    \end{block}
+    
+    \begin{lstlisting}
+list('Ciao') # ['C', 'i', 'a', 'o']
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Liste}
+    \begin{block}{Operatore in}
+    L'operatore \textbf{in} ci dice se un determinato elemento sia contenuto in una lista o meno.
+    \end{block}
+    
+    \begin{lstlisting}
+    vocals = ['a', 'e', 'i', 'o', 'u']
+    'e' in vocals # True
+    'g' in vocals # False
+    \end{lstlisting}
+\end{frame}
