@@ -1,0 +1,115 @@
+\documentclass{beamer}
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{Madrid}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{beaver} % or try albatross, beaver, crane, ...
+  \usefonttheme{serif}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage{hyperref}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{pdfpages}
+\usepackage{framed, color}
+\definecolor{shadecolor}{rgb}{1,0.8,0.3}
+\usepackage{color}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\usepackage{listings}
+\lstset{language=Python,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  numbers=left,
+  numbersep=5pt, 
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+  frame=lrbt,xleftmargin=\fboxsep,xrightmargin=-\fboxsep
+}
+
+\title[Ragazze Digitali 2019]{Ragazze Digitali A.A. 2018/2019}
+\author{E. Salvucci - S. Gattucci - C. Varini}
+\date{}
+
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+\begin{document}
+
+\include{intro.tex}
+
+\setbeamertemplate{background}{}
+
+\section{IDE}
+
+\begin{frame}{IDE}
+Un IDE (integrated development environment) e'
+
+un programma con il quale programmiamo.
+
+	\begin{columns}
+		\begin{column}{4cm}
+			\begin{figure}
+   				\includegraphics[height=5cm]{images/esempio_editor_spyder.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{6cm}
+			\begin{figure}
+   				\includegraphics[height=5cm]{images/esempio_console_spyder.png}
+			\end{figure}
+		\end{column}
+	\end{columns}
+Avviamo il nostro programma cliccando sul triangolo verde in alto	
+\end{frame}
+
+\input{operators.tex}
+
+\input{variables.tex}
+
+\input{texts.tex}
+
+\section{Il nostro primo programma}
+
+\begin{frame}[fragile]
+\frametitle{Hello World}
+
+    \begin{lstlisting}
+print('Hello World')
+# Qualsiasi testo preceduto dal cancelletto e' un commento
+print('Come ti chiami?')
+nome = input()
+print('Benvenuta a Ragazze Digitali, ' + nome + '!')
+    \end{lstlisting}
+
+\end{frame}
+
+\begin{frame}{Commenti}
+        I commenti possono essere utili per spiegare parti di codice con il linuguaggio naturale.
+        Python non esegue quello che c'è scritto in un commento ma lo ignora
+\end{frame}
+
+\end{document}
+
+
+
