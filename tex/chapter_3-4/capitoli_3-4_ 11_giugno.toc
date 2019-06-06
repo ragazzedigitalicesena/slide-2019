@@ -3,4 +3,4 @@
 \beamer@sectionintoc {2}{Istruzioni di controllo di flusso e organizzazione in blocchi}{9}{0}{2}
 \beamer@sectionintoc {3}{Conversione di valori e Boolean data type}{15}{0}{3}
 \beamer@sectionintoc {4}{Operatori di comparazione e if statement}{19}{0}{4}
-\beamer@sectionintoc {5}{Carattere di escape e uso di apici e virgolette}{24}{0}{5}
+\beamer@sectionintoc {5}{Ultime righe di codice}{24}{0}{5}
