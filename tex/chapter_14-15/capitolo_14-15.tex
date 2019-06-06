@@ -185,6 +185,27 @@ MAX_KEY_SIZE = len(SYMBOLS)
 \end{block}
 \end{frame}
 
+\section{Funzione bool()}
+
+\begin{frame}[fragile]
+\frametitle{bool()}
+\begin{block}{Come funziona}
+	\begin{itemize}
+		\item E' una funzione simile a \texttt{str()} e \texttt{int()} visti in precedenza; restituisce \texttt{True} o \texttt{False} in base a cosa viene passato in input. \\ Ogni data types ha un valore che viene considerato \textit{falso} mentre tutti gli altri sono considerati come \textit{veri}.
+		\item Copiamo una riga alla volta premendo poi invio nella console e vediamo cosa accade:
+	\end{itemize}
+\end{block}
+\begin{lstlisting}
+>>> bool(0)
+>>> bool(0.0)
+>>> bool('')
+>>> bool([])
+>>> bool(1)
+>>> bool('Hello')
+>>> bool([1, 2, 3, 4, 5])
+\end{lstlisting}
+\end{frame}
+
 \section{Caeser chiper}
 
 \begin{frame}[fragile]
@@ -244,5 +265,93 @@ translated = '' # inizializziamo a nullo il vettore che conterra' la stringa fin
 	\end{itemize}
 \end{block}
 
+\end{frame}
+
+\section{Othello game}
+
+\begin{frame}[fragile]
+\frametitle{Othello game 1/6}
+Conosciamo già tutti gli strumenti per poter creare l'\textbf{Othello game}, o Reversegam game.\\
+A questo \href{https://raw.githubusercontent.com/ragazzedigitalicesena/slide-2019/master/tex/chapter_14-15/reversegam.py}{link} troverete il codice sorgente nel quale mancano delle parti, che inserirete seguendo le indicazioni delle prossime slide.
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Othello game 2/6 - Come funziona}
+Il gioco si svolge su una griglia 8x8 e due giocatori con due pedine diverse (nel nostro caso: \textit{\textbf{x}} e \textit{\textbf{o}})
+\begin{columns}
+	\begin{column}[T]{0.3\textwidth}
+		\begin{center}
+			Si parte da una situazione iniziale di questo tipo:		
+		\begin{figure}[t]
+			\includegraphics[height=2.5cm, width=2.5cm]{images/ReverseGame1.png}
+		\end{figure}
+			L'obiettivo del gioco è conquistare più pedine del proprio colore. Come fare?
+		\end{center}
+	
+	\end{column}
+	\begin{column}[T]{0.3\textwidth}
+		\begin{center}
+			Inserendo una pedina del proprio colore in modo da circondare la pedina avversaria, la si conquisterà.
+		\begin{figure}[t]
+			\includegraphics[height=2.5cm, width=2.5cm]{images/ReverseGame2.png}
+		\end{figure}
+		\end{center}
+	\end{column}
+	\begin{column}[T]{0.3\textwidth}
+		\begin{center}
+		\begin{figure}[t]
+			\includegraphics[height=2.5cm, width=2.5cm]{images/ReverseGame3.png}
+		\end{figure}
+		Conquistata la pedina, la situazione successiva sarà quella appena mostrata. Si possono conquistare pedine anche in diagonale!
+	\end{center}
+	\end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Othello game 3/6}
+\begin{block}{Ora tocca a te!}
+	\begin{itemize}
+		\item \textbf{\#1} Crea due variabili globali, una per l'altezza e una per la larghezza, che servono a definire la grandezza della griglia.
+		\item \textbf{\#2} All'interno della funzione \texttt{isValidMove()} inserire un controllo per cui, se la pedina (\texttt{tile}) è \textit{'X'}, allora l'altra pedina (che potete chiamare, ad esempio \texttt{othertile}) sarà \textit{'O'}. Altrimenti, il contrario.
+		\item \textbf{\#3} Crea una funzione chiamandola \texttt{getBoardCopy(board)}, che, presa in ingresso una griglia (\texttt{board}), ne crei una copia e la restituisca.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Othello game 4/6}
+\begin{block}{Ora tocca a te!}
+	\begin{itemize}
+		\item \textbf{\#4} Creare un meccanismo per cui si scorre tutta la griglia e si incrementano le variabili \texttt{xscore} e \texttt{oscore} in base al numero di pedine presenti.
+		\item \textbf{\#5} Completare la funzione \texttt{whoGoesFirst()} in modo che, dato un numero casuale (\textit{0} o \textit{1}), se questo è 0, il turno sarà del computer e quindi verrà restituita una stringa \textit{'computer'}, altrimenti si restituisca la stringa \textit{'player'}
+		\item \textbf{\#6} Creare un meccanismo, all'interno della funzione \texttt{getPlayerMove()} tale per cui se la mossa fatta (contenuta nella variabile \texttt{move}) è \textit{'quit'} o \texttt{hints}, venga restituita la mossa stessa.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Othello game 5/6}
+\begin{block}{Ora tocca a te!}
+	\begin{itemize}
+		\item \textbf{\#7}Creare un meccanismo, all'interno della funzione \texttt{getPlayerMove()} tale per cui se la mossa fatta contiene 2 numeri e sia il primo che il secondo numero sono contenuti all'interno del vettore \texttt{DIGITS1TO8}, allora il primo numero venga inserito in una variabile e il secondo in un'altra. Da qui, se la mossa è valida si continui il ciclo, altrimenti si esca.\\
+		Se la mossa non è composta da due numeri o composta da numeri al di fuori del range, si stampino dei messaggi per aiutare l'utente a inserire numeri validi.
+		\item \textbf{\#8} Completare la funzione \texttt{printScore} in modo che, vengano recuperati i punteggi della partita dalla funzione che si occupa di calcolarli, e li stampi con un messaggio.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Othello game 6/6}
+\begin{block}{Ora tocca a te!}
+	\begin{itemize}
+		\item \textbf{\#9} Creare una nuova griglia (\textit{board}) nella quale inserire la configurazione iniziale delle pedine (come nella prima figura mostrata alla slide \textbf{22})
+		\item \textbf{\#10} Inserire un meccanismo per cui, se lo score del computer è maggiore di quello dell'utente, viene stampato un messaggio di perdita stampando il punteggio.\\
+		Se, invece, l'utente ha ottenuto un punteggio superiore del computer, viene stampato un messaggio di vittoria.\\
+		Se, altrimenti, si è ottenuto un punteggio pari, si stampi un altri messaggio inerente.
+	\end{itemize}
+\end{block}
 \end{frame}
 \end{document}

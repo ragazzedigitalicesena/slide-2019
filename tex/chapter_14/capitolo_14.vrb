@@ -1,8 +1,0 @@
-\frametitle{Caeser chiper 5/5}
-\begin{block}{Ora tocca a voi!}
-	\begin{itemize}
-		\item Come ultima cosa richiamate le funzioni, salvate i valori restituiti e stampate la stringa criptata o decriptata!
-		\item Ed ecco, il nostro cifrario è completato!
-	\end{itemize}
-\end{block}
-
