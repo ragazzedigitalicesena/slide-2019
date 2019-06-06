@@ -1,7 +1,7 @@
 This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.22)  6 JUN 2019 21:58
 entering extended mode
-**"./capitoli_3-4_ 11_giugno.tex"
-("capitoli_3-4_ 11_giugno.tex"
+**./capitolo_14-15.tex
+(capitolo_14-15.tex
 LaTeX2e <2018-12-01>
 ("D:\Software\Software Scuola\MikText\tex/latex/beamer\beamer.cls"
 Document Class: beamer 2018/12/02 v3.55 A class for typesetting presentations
@@ -793,8 +793,8 @@ Package: listings 2018/09/02 1.7 (Carsten Heinz)
 ("D:\Software\Software Scuola\MikText\tex/latex/listings\lstlang1.sty"
 File: lstlang1.sty 2018/09/02 1.7 listings language file
 )
-("capitoli_3-4_ 11_giugno.aux")
-\openout1 = `"capitoli_3-4_ 11_giugno.aux"'.
+(capitolo_14-15.aux)
+\openout1 = `capitolo_14-15.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
@@ -886,9 +886,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 60.
 LaTeX Info: Redefining \pageref on input line 60.
 LaTeX Info: Redefining \nameref on input line 60.
- ("capitoli_3-4_ 11_giugno.out") ("capitoli_3-4_ 11_giugno.out")
+ (capitolo_14-15.out) (capitolo_14-15.out)
 \@outlinefile=\write5
-\openout5 = `"capitoli_3-4_ 11_giugno.out"'.
+\openout5 = `capitolo_14-15.out'.
 
 
 ("D:\Software\Software Scuola\MikText\tex/latex/translator\translator-basic-dic
@@ -928,8 +928,8 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 \c@lstlisting=\count179
 
-("capitoli_3-4_ 11_giugno.nav")
-<images/ragazze_digitali.jpg, id=33, 1027.84pt x 770.88pt>
+(capitolo_14-15.nav)
+<images/ragazze_digitali.jpg, id=37, 1027.84pt x 770.88pt>
 File: images/ragazze_digitali.jpg Graphic file (type jpg)
 <use images/ragazze_digitali.jpg>
 Package pdftex.def Info: images/ragazze_digitali.jpg  used on input line 65.
@@ -945,207 +945,191 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 ] [3
 
 ]
-\openout4 = `"capitoli_3-4_ 11_giugno.vrb"'.
-
-
-("capitoli_3-4_ 11_giugno.vrb"
-LaTeX Font Info:    Try loading font information for U+msa on input line 6.
-
-("D:\Software\Software Scuola\MikText\tex/latex/amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 6.
-
-("D:\Software\Software Scuola\MikText\tex/latex/amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)) [4
+(capitolo_14-15.toc) [4
 
 ]
-("capitoli_3-4_ 11_giugno.toc") [5
+\openout4 = `capitolo_14-15.vrb'.
+
+ (capitolo_14-15.vrb) [5
 
 ]
-\openout4 = `"capitoli_3-4_ 11_giugno.vrb"'.
+\openout4 = `capitolo_14-15.vrb'.
 
- ("capitoli_3-4_ 11_giugno.vrb") [6
-
-]
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 129.
-
-[7
-
-] [8
-
-] ("capitoli_3-4_ 11_giugno.toc") [9
+ (capitolo_14-15.vrb) [6
 
 ]
-\openout4 = `"capitoli_3-4_ 11_giugno.vrb"'.
+\openout4 = `capitolo_14-15.vrb'.
 
- ("capitoli_3-4_ 11_giugno.vrb")
-[10
 
-]
-\openout4 = `"capitoli_3-4_ 11_giugno.vrb"'.
+(capitolo_14-15.vrb
+<images/Caesar.png, id=107, 441.65pt x 186.6975pt>
+File: images/Caesar.png Graphic file (type png)
+<use images/Caesar.png>
+Package pdftex.def Info: images/Caesar.png  used on input line 10.
+(pdftex.def)             Requested size: 136.91681pt x 76.82278pt.
+<images/AlfabetoCaeser.png, id=109, 381.67593pt x 64.74188pt>
+File: images/AlfabetoCaeser.png Graphic file (type png)
+<use images/AlfabetoCaeser.png>
+Package pdftex.def Info: images/AlfabetoCaeser.png  used on input line 15.
+(pdftex.def)             Requested size: 342.31126pt x 71.13922pt.
+) [7
 
- ("capitoli_3-4_ 11_giugno.vrb") [11
-
-]
-\openout4 = `"capitoli_3-4_ 11_giugno.vrb"'.
-
- ("capitoli_3-4_ 11_giugno.vrb")
-[12
-
-]
-\openout4 = `"capitoli_3-4_ 11_giugno.vrb"'.
-
- ("capitoli_3-4_ 11_giugno.vrb") [13
+ <./images/Caesar.png> <./images/AlfabetoCaeser.png>]
+(capitolo_14-15.toc) [8
 
 ]
-\openout4 = `"capitoli_3-4_ 11_giugno.vrb"'.
+\openout4 = `capitolo_14-15.vrb'.
 
- ("capitoli_3-4_ 11_giugno.vrb")
-[14
+ (capitolo_14-15.vrb) [9
 
-] ("capitoli_3-4_ 11_giugno.toc") [15
+] (capitolo_14-15.toc) [10
 
 ]
-\openout4 = `"capitoli_3-4_ 11_giugno.vrb"'.
+\openout4 = `capitolo_14-15.vrb'.
 
- ("capitoli_3-4_ 11_giugno.vrb")
+
+(capitolo_14-15.vrb) [11
+
+] (capitolo_14-15.toc) [12
+
+]
+\openout4 = `capitolo_14-15.vrb'.
+
+ (capitolo_14-15.vrb)
+Overfull \vbox (5.12595pt too high) detected at line 207
+ []
+
+[13
+
+] (capitolo_14-15.toc) [14
+
+]
+\openout4 = `capitolo_14-15.vrb'.
+
+ (capitolo_14-15.vrb) [15
+
+]
+\openout4 = `capitolo_14-15.vrb'.
+
+ (capitolo_14-15.vrb)
 [16
 
 ]
-\openout4 = `"capitoli_3-4_ 11_giugno.vrb"'.
+\openout4 = `capitolo_14-15.vrb'.
 
- ("capitoli_3-4_ 11_giugno.vrb") [17
-
-]
-\openout4 = `"capitoli_3-4_ 11_giugno.vrb"'.
-
- ("capitoli_3-4_ 11_giugno.vrb")
-[18
-
-] ("capitoli_3-4_ 11_giugno.toc") [19
+ (capitolo_14-15.vrb) [17
 
 ]
-\openout4 = `"capitoli_3-4_ 11_giugno.vrb"'.
+\openout4 = `capitolo_14-15.vrb'.
 
- ("capitoli_3-4_ 11_giugno.vrb")
-[20
-
-]
-\openout4 = `"capitoli_3-4_ 11_giugno.vrb"'.
-
- ("capitoli_3-4_ 11_giugno.vrb") [21
+ (capitolo_14-15.vrb) [18
 
 ]
-\openout4 = `"capitoli_3-4_ 11_giugno.vrb"'.
+\openout4 = `capitolo_14-15.vrb'.
 
- ("capitoli_3-4_ 11_giugno.vrb"
-<images/if.png, id=211, 628.59843pt x 350.05782pt>
-File: images/if.png Graphic file (type png)
-<use images/if.png>
-Package pdftex.def Info: images/if.png  used on input line 5.
-(pdftex.def)             Requested size: 171.1434pt x 105.27454pt.
-<images/if2.png, id=212, 658.71094pt x 365.86688pt>
-File: images/if2.png Graphic file (type png)
-<use images/if2.png>
-Package pdftex.def Info: images/if2.png  used on input line 10.
-(pdftex.def)             Requested size: 171.14018pt x 105.27243pt.
-<images/if3.png, id=213, 503.63156pt x 343.2825pt>
-File: images/if3.png Graphic file (type png)
-<use images/if3.png>
-Package pdftex.def Info: images/if3.png  used on input line 15.
-(pdftex.def)             Requested size: 171.14792pt x 105.27457pt.
+ (capitolo_14-15.vrb)
+[19
+
+] (capitolo_14-15.toc) [20
+
+]
+\openout4 = `capitolo_14-15.vrb'.
+
+ (capitolo_14-15.vrb) [21
+
+]
+\openout4 = `capitolo_14-15.vrb'.
+
+ (capitolo_14-15.vrb
+<images/ReverseGame1.png, id=234, 162.6075pt x 160.34906pt>
+File: images/ReverseGame1.png Graphic file (type png)
+<use images/ReverseGame1.png>
+Package pdftex.def Info: images/ReverseGame1.png  used on input line 8.
+(pdftex.def)             Requested size: 71.13315pt x 71.13367pt.
+<images/ReverseGame2.png, id=235, 160.34906pt x 161.10187pt>
+File: images/ReverseGame2.png Graphic file (type png)
+<use images/ReverseGame2.png>
+Package pdftex.def Info: images/ReverseGame2.png  used on input line 18.
+(pdftex.def)             Requested size: 71.13367pt x 71.13332pt.
+<images/ReverseGame3.png, id=236, 161.85469pt x 156.585pt>
+File: images/ReverseGame3.png Graphic file (type png)
+<use images/ReverseGame3.png>
+Package pdftex.def Info: images/ReverseGame3.png  used on input line 25.
+(pdftex.def)             Requested size: 71.1323pt x 71.13399pt.
 )
-Overfull \vbox (7.49306pt too high) detected at line 304
+Overfull \vbox (1.32556pt too high) detected at line 310
  []
 
 [22
 
- <./images/if.png> <./images/if2.png> <./images/if3.png>]
-\openout4 = `"capitoli_3-4_ 11_giugno.vrb"'.
+ <./images/ReverseGame1.png> <./images/ReverseGame2.png> <./images/ReverseGame3
+.png>]
+\openout4 = `capitolo_14-15.vrb'.
 
-
-("capitoli_3-4_ 11_giugno.vrb") [23
-
-] ("capitoli_3-4_ 11_giugno.toc") [24
+ (capitolo_14-15.vrb) [23
 
 ]
-\openout4 = `"capitoli_3-4_ 11_giugno.vrb"'.
+\openout4 = `capitolo_14-15.vrb'.
 
-
-("capitoli_3-4_ 11_giugno.vrb") [25
-
-]
-\openout4 = `"capitoli_3-4_ 11_giugno.vrb"'.
-
- ("capitoli_3-4_ 11_giugno.vrb"
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 4.
-
-("D:\Software\Software Scuola\MikText\tex/latex/base\omscmr.fd"
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 4.
-)
-Overfull \vbox (6.08844pt too high) detected at line 367
- []
-
-[26
+ (capitolo_14-15.vrb) [24
 
 ]
-<images/cc.jpeg, id=255, 88.33pt x 31.11626pt>
+\openout4 = `capitolo_14-15.vrb'.
+
+
+(capitolo_14-15.vrb) [25
+
+]
+\openout4 = `capitolo_14-15.vrb'.
+
+ (capitolo_14-15.vrb) [26
+
+]
+<images/cc.jpeg, id=273, 88.33pt x 31.11626pt>
 File: images/cc.jpeg Graphic file (type jpg)
 <use images/cc.jpeg>
-Package pdftex.def Info: images/cc.jpeg  used on input line 382.
+Package pdftex.def Info: images/cc.jpeg  used on input line 370.
 (pdftex.def)             Requested size: 64.61647pt x 22.76228pt.
  [27
 
  <./images/cc.jpeg>]
 \tf@nav=\write6
-\openout6 = `"capitoli_3-4_ 11_giugno.nav"'.
+\openout6 = `capitolo_14-15.nav'.
 
 \tf@toc=\write7
-\openout7 = `"capitoli_3-4_ 11_giugno.toc"'.
+\openout7 = `capitolo_14-15.toc'.
 
 \tf@snm=\write8
-\openout8 = `"capitoli_3-4_ 11_giugno.snm"'.
+\openout8 = `capitolo_14-15.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 383.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 383.
- ("capitoli_3-4_ 11_giugno.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 383.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 383.
-Package rerunfilecheck Info: File `"capitoli_3-4_ 11_giugno".out' has not chang
-ed.
-(rerunfilecheck)             Checksum: 9EEEF88BD1F8D763C05B113CD15D8388;397.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 371.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 371.
+
+(capitolo_14-15.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 371.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 371.
+Package rerunfilecheck Info: File `capitolo_14-15.out' has not changed.
+(rerunfilecheck)             Checksum: B27643AA053F63811E33FC47F684D3CB;314.
  ) 
 Here is how much of TeX's memory you used:
- 21300 strings out of 492946
- 391152 string characters out of 3131999
- 694327 words of memory out of 3000000
- 24600 multiletter control sequences out of 15000+200000
- 11127 words of font info for 42 fonts, out of 3000000 for 9000
+ 21252 strings out of 492946
+ 390150 string characters out of 3131999
+ 678327 words of memory out of 3000000
+ 24565 multiletter control sequences out of 15000+200000
+ 6903 words of font info for 25 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,15n,65p,813b,1465s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,15n,65p,802b,1598s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/cm/cmbx10.pf
-b><D:/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/cm/cmbx12.pf
 b><D:/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/cm/cmbxti10.
-pfb><D:/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/cm/cmmi10.
 pfb><D:/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/cm/cmr10.p
 fb><D:/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/cm/cmr12.pf
 b><D:/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/cm/cmr6.pfb>
 <D:/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/cm/cmr8.pfb><D
-:/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D
 :/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/cm/cmti10.pfb><D
-:/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D
-:/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/cm/cmtt12.pfb><D
-:/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/symbols/msam10.p
-fb>
-Output written on "capitoli_3-4_ 11_giugno.pdf" (27 pages, 346448 bytes).
+:/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on capitolo_14-15.pdf (27 pages, 315776 bytes).
 PDF statistics:
- 317 PDF objects out of 1000 (max. 8388607)
- 60 named destinations out of 1000 (max. 500000)
- 150 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 321 PDF objects out of 1000 (max. 8388607)
+ 61 named destinations out of 1000 (max. 500000)
+ 174 words of extra memory for PDF output out of 10000 (max. 10000000)
 

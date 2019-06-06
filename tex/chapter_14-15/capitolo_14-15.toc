@@ -1,0 +1,7 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Crittografia}{4}{0}{1}
+\beamer@sectionintoc {2}{Metodo find() delle stringhe}{8}{0}{2}
+\beamer@sectionintoc {3}{Metodo len()}{10}{0}{3}
+\beamer@sectionintoc {4}{Funzione bool()}{12}{0}{4}
+\beamer@sectionintoc {5}{Caeser chiper}{14}{0}{5}
+\beamer@sectionintoc {6}{Othello game}{20}{0}{6}
