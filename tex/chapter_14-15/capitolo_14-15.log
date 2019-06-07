@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.22)  6 JUN 2019 21:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.22)  7 JUN 2019 15:29
 entering extended mode
 **./capitolo_14-15.tex
 (capitolo_14-15.tex
@@ -990,34 +990,35 @@ Package pdftex.def Info: images/AlfabetoCaeser.png  used on input line 15.
 
 (capitolo_14-15.vrb) [11
 
-] (capitolo_14-15.toc) [12
-
 ]
 \openout4 = `capitolo_14-15.vrb'.
 
- (capitolo_14-15.vrb)
-Overfull \vbox (5.12595pt too high) detected at line 207
- []
+ (capitolo_14-15.vrb) [12
 
+] (capitolo_14-15.toc)
 [13
 
-] (capitolo_14-15.toc) [14
+]
+\openout4 = `capitolo_14-15.vrb'.
+
+ (capitolo_14-15.vrb)
+Overfull \vbox (5.12595pt too high) detected at line 225
+ []
+
+[14
+
+] (capitolo_14-15.toc) [15
 
 ]
 \openout4 = `capitolo_14-15.vrb'.
 
- (capitolo_14-15.vrb) [15
+ (capitolo_14-15.vrb) [16
 
 ]
 \openout4 = `capitolo_14-15.vrb'.
 
  (capitolo_14-15.vrb)
-[16
-
-]
-\openout4 = `capitolo_14-15.vrb'.
-
- (capitolo_14-15.vrb) [17
+[17
 
 ]
 \openout4 = `capitolo_14-15.vrb'.
@@ -1027,48 +1028,48 @@ Overfull \vbox (5.12595pt too high) detected at line 207
 ]
 \openout4 = `capitolo_14-15.vrb'.
 
- (capitolo_14-15.vrb)
-[19
-
-] (capitolo_14-15.toc) [20
+ (capitolo_14-15.vrb) [19
 
 ]
 \openout4 = `capitolo_14-15.vrb'.
 
- (capitolo_14-15.vrb) [21
+ (capitolo_14-15.vrb)
+[20
+
+] (capitolo_14-15.toc) [21
+
+]
+\openout4 = `capitolo_14-15.vrb'.
+
+ (capitolo_14-15.vrb) [22
 
 ]
 \openout4 = `capitolo_14-15.vrb'.
 
  (capitolo_14-15.vrb
-<images/ReverseGame1.png, id=234, 162.6075pt x 160.34906pt>
+<images/ReverseGame1.png, id=240, 162.6075pt x 160.34906pt>
 File: images/ReverseGame1.png Graphic file (type png)
 <use images/ReverseGame1.png>
 Package pdftex.def Info: images/ReverseGame1.png  used on input line 8.
 (pdftex.def)             Requested size: 71.13315pt x 71.13367pt.
-<images/ReverseGame2.png, id=235, 160.34906pt x 161.10187pt>
+<images/ReverseGame2.png, id=241, 160.34906pt x 161.10187pt>
 File: images/ReverseGame2.png Graphic file (type png)
 <use images/ReverseGame2.png>
 Package pdftex.def Info: images/ReverseGame2.png  used on input line 18.
 (pdftex.def)             Requested size: 71.13367pt x 71.13332pt.
-<images/ReverseGame3.png, id=236, 161.85469pt x 156.585pt>
+<images/ReverseGame3.png, id=242, 161.85469pt x 156.585pt>
 File: images/ReverseGame3.png Graphic file (type png)
 <use images/ReverseGame3.png>
 Package pdftex.def Info: images/ReverseGame3.png  used on input line 25.
 (pdftex.def)             Requested size: 71.1323pt x 71.13399pt.
 )
-Overfull \vbox (1.32556pt too high) detected at line 310
+Overfull \vbox (1.32556pt too high) detected at line 328
  []
 
-[22
+[23
 
  <./images/ReverseGame1.png> <./images/ReverseGame2.png> <./images/ReverseGame3
 .png>]
-\openout4 = `capitolo_14-15.vrb'.
-
- (capitolo_14-15.vrb) [23
-
-]
 \openout4 = `capitolo_14-15.vrb'.
 
  (capitolo_14-15.vrb) [24
@@ -1076,21 +1077,26 @@ Overfull \vbox (1.32556pt too high) detected at line 310
 ]
 \openout4 = `capitolo_14-15.vrb'.
 
-
-(capitolo_14-15.vrb) [25
+ (capitolo_14-15.vrb) [25
 
 ]
 \openout4 = `capitolo_14-15.vrb'.
 
- (capitolo_14-15.vrb) [26
+
+(capitolo_14-15.vrb) [26
 
 ]
-<images/cc.jpeg, id=273, 88.33pt x 31.11626pt>
+\openout4 = `capitolo_14-15.vrb'.
+
+ (capitolo_14-15.vrb) [27
+
+]
+<images/cc.jpeg, id=279, 88.33pt x 31.11626pt>
 File: images/cc.jpeg Graphic file (type jpg)
 <use images/cc.jpeg>
-Package pdftex.def Info: images/cc.jpeg  used on input line 370.
+Package pdftex.def Info: images/cc.jpeg  used on input line 388.
 (pdftex.def)             Requested size: 64.61647pt x 22.76228pt.
- [27
+ [28
 
  <./images/cc.jpeg>]
 \tf@nav=\write6
@@ -1102,20 +1108,20 @@ Package pdftex.def Info: images/cc.jpeg  used on input line 370.
 \tf@snm=\write8
 \openout8 = `capitolo_14-15.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 371.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 371.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 389.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 389.
 
 (capitolo_14-15.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 371.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 371.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 389.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 389.
 Package rerunfilecheck Info: File `capitolo_14-15.out' has not changed.
-(rerunfilecheck)             Checksum: B27643AA053F63811E33FC47F684D3CB;314.
+(rerunfilecheck)             Checksum: 1B4D952489B36731F3C1C5AAEBD75B70;342.
  ) 
 Here is how much of TeX's memory you used:
- 21252 strings out of 492946
- 390150 string characters out of 3131999
+ 21260 strings out of 492946
+ 390311 string characters out of 3131999
  678327 words of memory out of 3000000
- 24565 multiletter control sequences out of 15000+200000
+ 24569 multiletter control sequences out of 15000+200000
  6903 words of font info for 25 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,15n,65p,802b,1598s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1127,9 +1133,9 @@ b><D:/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/cm/cmr6.pfb>
 <D:/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/cm/cmr8.pfb><D
 :/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/cm/cmti10.pfb><D
 :/Software/Software Scuola/MikText/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on capitolo_14-15.pdf (27 pages, 315776 bytes).
+Output written on capitolo_14-15.pdf (28 pages, 318631 bytes).
 PDF statistics:
- 321 PDF objects out of 1000 (max. 8388607)
- 61 named destinations out of 1000 (max. 500000)
+ 327 PDF objects out of 1000 (max. 8388607)
+ 63 named destinations out of 1000 (max. 500000)
  174 words of extra memory for PDF output out of 10000 (max. 10000000)
 

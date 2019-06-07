@@ -164,7 +164,7 @@ La \textbf{chiave} del Caeser chiper è il numero di lettere shiftate.
 
 \end{frame}
 
-\section{Metodo len()}
+\section{Metodi string.len() e string.isdigit()}
 
 \begin{frame}[fragile]
 \frametitle{len()}
@@ -173,7 +173,7 @@ La \textbf{chiave} del Caeser chiper è il numero di lettere shiftate.
 		\item E' un metodo che restituisce il numero di caratteri presenti nella stringa passata in input
 		\item Proviamo a vedere con degli esempi come funziona
 	\end{itemize}
-
+\end{block}
 	\begin{lstlisting}
 SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 MAX_KEY_SIZE = len(SYMBOLS)
@@ -182,7 +182,25 @@ MAX_KEY_SIZE = len(SYMBOLS)
 		\item In questo esempio, la variabile globale \texttt{SYMBOLS} contiene una stringa rappresentante tutte le lettere dell'alfabeto.
 		\item La variabile globale \texttt{MAX\_KEY\_SIZE}, invece, contiene il risultato della chiamata alla funzione \textbf{len()} invocata con parametro la stringa di cui vogliamo calcolare la lunghezza
 	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{isdigit()}
+\begin{block}{Come funziona}
+	\begin{itemize}
+		\item E' un metodo che restituisce \texttt{True} se la stringa sul quale è invocato, contiene solo numeri. Restituisce \texttt{False} altrimenti.
+		\item Proviamo a vedere con degli esempi come funziona
+	\end{itemize}
 \end{block}
+	\begin{lstlisting}
+>>> '42'.isdigit()
+>>> 'forty'.isdigit()
+>>> ''.isdigit()
+>>> 'hello'.isdigit()
+>>> x = '10'
+>>> x.isdigit()
+	\end{lstlisting}	
+Copiamo una riga alla volta nella shell di Python e osserviamo cosa accade per ognuna di esse.
 \end{frame}
 
 \section{Funzione bool()}

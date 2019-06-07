@@ -75,10 +75,10 @@
 \section{Installare pygame}
 
 \begin{frame}[fragile]
-\frametitle{Installare pygame}
+\frametitle{Installare pygame su Spyder}
 	\begin{block}{Come installare \texttt{pygame}}
 		\begin{itemize}
-			\item Per installare pygame sul proprio computer è sufficiente andare su \textit{\textbf{Start $>$ anaconda3 $>$ anaconda prompt}} e digitare nella finestra che appare il comando \texttt{pip install pygame}
+			\item Per installare pygame su Spyder è sufficiente andare su \textit{\textbf{Start $>$ anaconda3 $>$ anaconda prompt}} e digitare nella finestra che appare il comando \texttt{pip install pygame}
 			\item Per controllare se è stato correttamente installato scriviamo sulla shell di Python il comando \texttt{import pygame} e verifichiamo che l'output sia simile a quello in figura:
 			\begin{figure}[t]
 				\includegraphics[height=2.9cm, width=9cm]{images/Import-pygame.jpg}
@@ -86,6 +86,33 @@
 			\item Sui pc della scuola è già installato, quindi ora iniziamo a vedere qualche comando!
 		\end{itemize}
 	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Installare pygame su PyCharm 1/2}
+\begin{block}{Come installare \texttt{pygame}}
+	\begin{itemize}
+		\item Per installare pygame su PyCharm è sufficiente aprire il progetto corrente, andare su \textbf{File $>$ Settings $>$ Project: $>$ Project Interpreter} (come cerchiato in figura a sinistra); a questo punto, cliccare il pulsante "+" a destra (cerchiato in figura), cercare nella barra in alto \textit{"pygame"}, selezionarlo e cliccare \textit{"Install Package"}
+		\begin{figure}[t]
+			\includegraphics[height=4.5cm, width=9cm]{images/PyCharm.jpg}
+		\end{figure}
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Installare pygame su PyCharm 2/2}
+
+Per controllare se è stato correttamente installato, creiamo un file all'interno del progetto, scriviamo queste due righe di codice ed eseguiamo.
+\begin{lstlisting}
+import pygame
+pygame.init()
+		\end{lstlisting}
+		\begin{figure}[t]
+			\includegraphics[height=2.9cm, width=11cm]{images/PyCharmOK.png}
+		\end{figure}
+Sui pc della scuola è già installato, quindi ora iniziamo a vedere qualche comando!
+
 \end{frame}
 
 \section{Primi comandi}
@@ -104,11 +131,36 @@ pygame.init()
 		\end{column}
 \begin{column}[T]{0.45\textwidth}
 	\begin{figure}[t]
-		\includegraphics[height=2cm, width=5cm]{images/pixel.png}
+		\includegraphics[height=2cm, width=5cm]{images/CosaPixel.png}
 	\end{figure}
 \end{column}
 \end{columns}
 	Per impostare la finestra che utilizzeremo il metodo \texttt{set\_mode()} del modulo \texttt{display}, al quale ci si accede dal modulo \texttt{pygame}
+\begin{lstlisting}
+windowSurface = pygame.display.set_mode((500, 400), 0, 32)
+\end{lstlisting}
+In questo modo, viene impostata una finestra larga \textbf{500} pixel e alta \textbf{400} pixel. Gli altri due parametri (0 e 32), per questo corso, li copiamo senza approfondire.
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Import e impostazione della finestra}
+Innanzitutto importiamo e inizializziamo il modulo \texttt{pygame} nel nostro programma con queste semplici istruzioni:
+\begin{columns}[T]
+	\begin{column}[T]{0.55\textwidth}
+		\begin{lstlisting}
+import pygame, sys
+from pygame.locals import *
+		
+pygame.init()
+		\end{lstlisting}
+	\end{column}
+	\begin{column}[T]{0.45\textwidth}
+		\begin{figure}[t]
+			\includegraphics[height=2cm, width=5cm]{images/pixel.png}
+		\end{figure}
+	\end{column}
+\end{columns}
+Per impostare la finestra che utilizzeremo il metodo \texttt{set\_mode()} del modulo \texttt{display}, al quale ci si accede dal modulo \texttt{pygame}
 \begin{lstlisting}
 windowSurface = pygame.display.set_mode((500, 400), 0, 32)
 \end{lstlisting}
@@ -184,17 +236,6 @@ BLUE = (0, 0, 255)
 \section{Scrivere testi in pygame}
 
 \begin{frame}[fragile]
-\frametitle{Una parentesi: gli oggetti}
-\begin{block}{Oggetti}
-	\begin{itemize}
-		\item Un oggetto è semplicemente un altro nome per chiamare i data type che hanno dei metodi.
-		\item Per esempio, il data type \textit{string} è un oggetto, siccome  possiede dei metodi come \texttt{lower()}.
-		\item Il metodo \texttt{set\_mode()} visto in precedenza permette di creare un \textit{Surface object} che rappresenta la finestra. Su di esso potremo evocare altri metodi per modificare tale finestra.
-	\end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}[fragile]
 \frametitle{Fonts 1/2}
 \begin{lstlisting}
 # Set up the fonts.
@@ -202,8 +243,9 @@ basicFont = pygame.font.SysFont(None, 48)
 \end{lstlisting}
 \begin{block}{Impostare un font}
 	\begin{itemize}
-		\item Il metodo \texttt{pygame.font.SysFont()} permette di creare un \textit{Font object}. Questa funzione prende in input due parametri: il primo è il nome del font (in questo caso viene impostato quello di default) e il secondo parametro è la grandezza.
-		\item Su questo \textit{Font object}, che abbiamo salvato nella variabile \texttt{basicFont}, possiamo invocare alcuni metodi, tra cui \texttt{render()}
+		\item Attraverso la funzione \texttt{pygame.font.SysFont()} è possibile impostare il font del nostro testo.
+		\item Questa funzione prende in input due parametri: il primo è il nome del font (in questo caso viene impostato quello di default) e il secondo parametro è la grandezza.
+		\item Salviamo il risultato di questa funzione nella variabile \texttt{basicFont}, sulla quale invocheremo il metodo \texttt{render()}
 	\end{itemize}
 \end{block}
 \end{frame}
@@ -219,7 +261,7 @@ text = basicFont.render('Hello world!', True, WHITE, BLUE)
 	\begin{column}[T]{0.7\textwidth}
 		\begin{block}{Impostare un font}
 			\begin{itemize}
-				\item Questo metodo permette di creare un \textit{Surface object} con il testo indicato nel primo parametro del metodo.
+				\item Questo metodo permette di \textit{renderizzare} la scritta che inseriremo in una variabile \texttt{text}.
 				\item Il secondo parametro permette di creare un effetto \textit{"blur"} al testo, chiamato anti-alias, come in figura.
 				\item Il terzo e quarto paragrafo indicano il colore del testo e del backgroun, (sfondo), rispettivamente.
 			\end{itemize}
@@ -245,9 +287,8 @@ textRect.centery = windowSurface.get_rect().centery
 
 	\begin{block}{Disposizione testo}
 		\begin{itemize}
-			\item Dal momento che abbiamo creato un \textit{Font object}, dobbiamo predisporre un \textit{Rect objet} che servirà per disporre all'interno della finestra il nostro testo. Per fare ciò, utilizziamo il metodo \texttt{get\_rect()}.
-			\item Possiamo accedere ad alcuni \textbf{attributi} di questo oggetto.
-			\item Un \textbf{attributo} rappresenta una variabile all'interno dell'oggetto, il cui valore può essere cambiato.
+			\item Il metodo \texttt{get\_rect()} serve per disporre il nostro testo all'interno della finestra.
+			\item Ciò che otteniamo con l'invocazione di questo metodo lo possiamo inserire all'interno di una variabile (\texttt{textRect}), e su di essa possiamo accedere ad alcuni valori che ci danno informazioni utili per capire e impostare la posizione del testo.
 		\end{itemize}
 	\end{block}
 \end{frame}
@@ -261,7 +302,7 @@ textRect.centery = windowSurface.get_rect().centery
 		\end{figure}
 	\end{column}
 	\begin{column}[T]{0.3\textwidth}
-		Ecco alcuni attributi di questo oggetto, che potranno esserci utili in futuro.\\
+		Ecco alcuni valori a cui possiamo accedere e che potranno esserci utili in futuro.\\
 		
 	\end{column}
 \end{columns}
@@ -406,8 +447,7 @@ Con questo semplice metodo riusciamo a rendere visibile sul nostro display tutto
 \begin{block}{Eventi}
 	\begin{itemize}
 		\item Un evento è qualcosa che accade all'interno del nostro programma, come un click o movimento del mouse o la pressione di un tasto.
-		\item Quando si verifica un evento, viene generato un \textit{Event object}, il quale può essere intercettato tramite la funzione \texttt{get()}.
-		\item L'attributo \texttt{type} dell'oggetto \textit{Event} contiene alcuni tipi di eventi predefiniti, come \texttt{QUIT}.
+		\item Possiamo intercettare gli eventi tramite la funzione \texttt{get()}, mentre il valore \texttt{type} (a cui accediamo tramite \texttt{event.type}) indica il tipo di evento di cui si tratta.
 	\end{itemize}
 \end{block}
 \begin{lstlisting}

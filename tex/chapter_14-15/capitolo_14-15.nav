@@ -24,54 +24,56 @@
 \headcommand {\beamer@framepages {9}{9}}
 \headcommand {\beamer@sectionpages {8}{9}}
 \headcommand {\beamer@subsectionpages {8}{9}}
-\headcommand {\sectionentry {3}{Metodo len()}{10}{Metodo len()}{0}}
+\headcommand {\sectionentry {3}{Metodi string.len() e string.isdigit()}{10}{Metodi string.len() e string.isdigit()}{0}}
 \headcommand {\slideentry {3}{0}{1}{10/10}{}{0}}
 \headcommand {\beamer@framepages {10}{10}}
 \headcommand {\slideentry {3}{0}{2}{11/11}{}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\beamer@sectionpages {10}{11}}
-\headcommand {\beamer@subsectionpages {10}{11}}
-\headcommand {\sectionentry {4}{Funzione bool()}{12}{Funzione bool()}{0}}
-\headcommand {\slideentry {4}{0}{1}{12/12}{}{0}}
+\headcommand {\slideentry {3}{0}{3}{12/12}{}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {4}{0}{2}{13/13}{}{0}}
+\headcommand {\beamer@sectionpages {10}{12}}
+\headcommand {\beamer@subsectionpages {10}{12}}
+\headcommand {\sectionentry {4}{Funzione bool()}{13}{Funzione bool()}{0}}
+\headcommand {\slideentry {4}{0}{1}{13/13}{}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\beamer@sectionpages {12}{13}}
-\headcommand {\beamer@subsectionpages {12}{13}}
-\headcommand {\sectionentry {5}{Caeser chiper}{14}{Caeser chiper}{0}}
-\headcommand {\slideentry {5}{0}{1}{14/14}{}{0}}
+\headcommand {\slideentry {4}{0}{2}{14/14}{}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\slideentry {5}{0}{2}{15/15}{}{0}}
+\headcommand {\beamer@sectionpages {13}{14}}
+\headcommand {\beamer@subsectionpages {13}{14}}
+\headcommand {\sectionentry {5}{Caeser chiper}{15}{Caeser chiper}{0}}
+\headcommand {\slideentry {5}{0}{1}{15/15}{}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\slideentry {5}{0}{3}{16/16}{}{0}}
+\headcommand {\slideentry {5}{0}{2}{16/16}{}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\slideentry {5}{0}{4}{17/17}{}{0}}
+\headcommand {\slideentry {5}{0}{3}{17/17}{}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\slideentry {5}{0}{5}{18/18}{}{0}}
+\headcommand {\slideentry {5}{0}{4}{18/18}{}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\slideentry {5}{0}{6}{19/19}{}{0}}
+\headcommand {\slideentry {5}{0}{5}{19/19}{}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\beamer@sectionpages {14}{19}}
-\headcommand {\beamer@subsectionpages {14}{19}}
-\headcommand {\sectionentry {6}{Othello game}{20}{Othello game}{0}}
-\headcommand {\slideentry {6}{0}{1}{20/20}{}{0}}
+\headcommand {\slideentry {5}{0}{6}{20/20}{}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\slideentry {6}{0}{2}{21/21}{}{0}}
+\headcommand {\beamer@sectionpages {15}{20}}
+\headcommand {\beamer@subsectionpages {15}{20}}
+\headcommand {\sectionentry {6}{Othello game}{21}{Othello game}{0}}
+\headcommand {\slideentry {6}{0}{1}{21/21}{}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\slideentry {6}{0}{3}{22/22}{}{0}}
+\headcommand {\slideentry {6}{0}{2}{22/22}{}{0}}
 \headcommand {\beamer@framepages {22}{22}}
-\headcommand {\slideentry {6}{0}{4}{23/23}{}{0}}
+\headcommand {\slideentry {6}{0}{3}{23/23}{}{0}}
 \headcommand {\beamer@framepages {23}{23}}
-\headcommand {\slideentry {6}{0}{5}{24/24}{}{0}}
+\headcommand {\slideentry {6}{0}{4}{24/24}{}{0}}
 \headcommand {\beamer@framepages {24}{24}}
-\headcommand {\slideentry {6}{0}{6}{25/25}{}{0}}
+\headcommand {\slideentry {6}{0}{5}{25/25}{}{0}}
 \headcommand {\beamer@framepages {25}{25}}
-\headcommand {\slideentry {6}{0}{7}{26/26}{}{0}}
+\headcommand {\slideentry {6}{0}{6}{26/26}{}{0}}
 \headcommand {\beamer@framepages {26}{26}}
-\headcommand {\slideentry {6}{0}{8}{27/27}{}{0}}
+\headcommand {\slideentry {6}{0}{7}{27/27}{}{0}}
 \headcommand {\beamer@framepages {27}{27}}
-\headcommand {\beamer@partpages {1}{27}}
-\headcommand {\beamer@subsectionpages {20}{27}}
-\headcommand {\beamer@sectionpages {20}{27}}
-\headcommand {\beamer@documentpages {27}}
-\headcommand {\gdef \inserttotalframenumber {27}}
+\headcommand {\slideentry {6}{0}{8}{28/28}{}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\beamer@partpages {1}{28}}
+\headcommand {\beamer@subsectionpages {21}{28}}
+\headcommand {\beamer@sectionpages {21}{28}}
+\headcommand {\beamer@documentpages {28}}
+\headcommand {\gdef \inserttotalframenumber {28}}
