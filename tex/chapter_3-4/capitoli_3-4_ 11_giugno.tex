@@ -96,7 +96,7 @@
 		\item Apriamo Spyder, l'IDE che useremo per programmare in Python
 		\item Troviamo già un file vuoto che ci aspetta..
 		\item ..Salviamo il file  tramite \textbf{File} $\rhd$ \textbf{Save as}
-		\item Rinominiamo il file \textit{guess.py}, selezioniamo la cartella di destinazione (DA CHIEDERE A ENRI: QUALE CARTELLA DI DESTINAZIONE?) e iniziamo a riemprlo di codice!
+		\item Rinominiamo il file \textit{guess.py}, selezioniamo la vostra cartella personale come cartella di destinazione e iniziamo a riemprlo di codice!
 	\end{itemize}
 \end{block}
     
@@ -326,7 +326,7 @@ Copiamo ciascuna riga premendo subito invio sulla console di Python, e osserviam
 \end{center}
 \end{frame}
 
-\section{Carattere di escape e uso di apici e virgolette}
+\section{Ultime righe di codice}
 
 \begin{frame}[fragile]
 \frametitle{guess.py}
@@ -343,40 +343,8 @@ if guess != number:
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Caratteri di escape e uso di apici e virgolette}
-	\begin{block}{Tiriamo le fila!}
-		\begin{itemize}
-			\item ...Ed eccoci arrivati all'ultimo frammento di codice di questo gioco interattivo!
-			\item Ritroviamo due costrutti \texttt{if} che servono per mandare un messaggio finale all'utente:\newline
-			- \textbf{SE} il giocatore ha vinto, ci congratuliamo (se l'è meritato!) e stampiamo quanti tentativi ci ha messo per indovinare il numer;\newline
-			- \textbf{SE} il giocatore non ha vinto, stampiamo semplicemente il numero che aveva pensato il programma
-			\item Vi ricordate \texttt{str()} cosa fa?
-			\item Avete notato qualcosa di diverso tra queste due ultime \texttt{print()}?
-		\end{itemize}
-	\end{block}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Caratteri di escape e uso di apici e virgolette}
-\begin{block}{Ultimi concetti}
-	\begin{itemize}
-		\item Queste due ultime \texttt{print()} hanno qualcosa di diverso tra loro...
-		\item Nella prima \texttt{print()} sono stati gli apici (\textbf{'}) mentre per la seconda  \texttt{print()} sono state usate le doppie virgolette (\textbf{"}) per racchiudere le stringhe da stampare
-		\item Quindi.... quale usiamo?
-		\item ...Tutte e due! Basta che non le mischiamo!
-	\end{itemize}
-\end{block}
-\begin{lstlisting}
->>> print('Hello world')
->>> print("Hello world")
->>> print('Hello world")
-\end{lstlisting}
-Copiamo ciascuna riga premendo subito invio sulla console di Python, e osserviamo cosa succede per ognuna delle 3 istruzioni!
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Caratteri di escape e uso di apici e virgolette}
-\begin{block}{Ultimi concetti}
+\frametitle{Ultime righe di codice}
+	\begin{block}{Carattere di escape}
 	\begin{itemize}
 		\item C'è un'altra cosa strana in una delle due \texttt{print()}... A cosa serve quel \textbackslash prima dell'apice tra \textit{That} e \textit{s}?
 		\item Viene usato, all'interno di stringhe, come \textbf{carattere di escape}
@@ -385,18 +353,31 @@ Copiamo ciascuna riga premendo subito invio sulla console di Python, e osserviam
 	\end{itemize}
 \end{block}
 \begin{center}
-	\begin{tabular}{ c  c }
-		\hline
-		Carattere di escape & Cosa viene stampato \\ 
-		\hline
-		\textbackslash \textbackslash & Backslash (\textbackslash)  \\
-		\textbackslash ' & Apice(') \\
-		\textbackslash " & Doppie virgolette (")\\  
-		\textbackslash n & Andata a capo\\
-		\textbackslash t & Tabulazione 
-	\end{tabular}
+\begin{tabular}{ c  c }
+	\hline
+	Carattere di escape & Cosa viene stampato \\ 
+	\hline
+	\textbackslash \textbackslash & Backslash (\textbackslash)  \\
+	\textbackslash ' & Apice(') \\
+	\textbackslash " & Doppie virgolette (")\\  
+	\textbackslash n & Andata a capo\\
+	\textbackslash t & Tabulazione 
+\end{tabular}
 \end{center}
 \end{frame}
 
 
+\begin{frame}
+
+\begin{center}
+	\bigskip
+	Materiale rilasciato con licenza
+	
+	\textbf{\href{http://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons - Attributions, Share-alike 4.0}}
+	
+	\medskip
+	\includegraphics[height=0.8cm]{images/cc.jpeg}
+\end{center}
+
+\end{frame}	
 \end{document}

@@ -1,5 +1,5 @@
-\frametitle{Caratteri di escape e uso di apici e virgolette}
-\begin{block}{Ultimi concetti}
+\frametitle{Ultime righe di codice}
+	\begin{block}{Carattere di escape}
 	\begin{itemize}
 		\item C'è un'altra cosa strana in una delle due \texttt{print()}... A cosa serve quel \textbackslash prima dell'apice tra \textit{That} e \textit{s}?
 		\item Viene usato, all'interno di stringhe, come \textbf{carattere di escape}
@@ -8,14 +8,14 @@
 	\end{itemize}
 \end{block}
 \begin{center}
-	\begin{tabular}{ c  c }
-		\hline
-		Carattere di escape & Cosa viene stampato \\
-		\hline
-		\textbackslash \textbackslash & Backslash (\textbackslash)  \\
-		\textbackslash ' & Apice(') \\
-		\textbackslash " & Doppie virgolette (")\\
-		\textbackslash n & Andata a capo\\
-		\textbackslash t & Tabulazione
-	\end{tabular}
+\begin{tabular}{ c  c }
+	\hline
+	Carattere di escape & Cosa viene stampato \\
+	\hline
+	\textbackslash \textbackslash & Backslash (\textbackslash)  \\
+	\textbackslash ' & Apice(') \\
+	\textbackslash " & Doppie virgolette (")\\
+	\textbackslash n & Andata a capo\\
+	\textbackslash t & Tabulazione
+\end{tabular}
 \end{center}

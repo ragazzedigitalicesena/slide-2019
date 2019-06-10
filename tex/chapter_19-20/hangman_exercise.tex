@@ -1,0 +1,107 @@
+
+\section{L'impiccato}
+
+\begin{frame}
+\frametitle{L'impiccato - Parte 0}
+    Per realizzare il gioco dell'impiccato dovrete completare il codice che trovate a questo
+\href{https://raw.githubusercontent.com/ragazzedigitalicesena/slide-2019/master/tex/chapter_5-8/hangman.py}{link} seguendo le indicazioni riportate nelle pagine successive
+
+\vspace{5mm}
+\href{https://raw.githubusercontent.com/ragazzedigitalicesena/slide-2019/master/tex/chapter_5-8/hangman.py}{Download}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{L'impiccato - Parte 1}
+
+\begin{block}{E' il vostro turno!}
+    
+    \begin{itemize}
+        \item Importa il modulo random, come visto in precedenza
+        \item Crea una variabile globale chiamata words (nello specifico una stringa) che contenga le parole che il giocatore dovra' indovinare separate da spazi. Trasforma quindi la stringa in una lista che abbia le parole della variabile creata come elementi [aiuto: utilizza la funzione split()]
+        \item Crea una variabile globale chiamata missedLetters (una stringa vuota nello specifico) con la quale memorizzeremo le lettere sbagliate inserite dall'utente
+        \item Crea una variabile globale chiamata correctLetters (una stringa vuota nello specifico) on la quale memorizzeremo le lettere sbagliate inserite dall'utente
+        \item Crea una variabile globale chiamamta secretWord il cui valore e' il risultato della funzione che ritorna una parola casuale dalla lista di parole
+    \end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{L'impiccato - Parte 2}
+
+\begin{block}{E' il vostro turno!}
+
+    \begin{itemize}
+        \item Crea una funzione chiamata getRandomWord(wordList) che, data come parametro una lista di parole (la quale in precedenza abbiamo chiamato words), restituisca un suo elemento random
+        
+        (ad esempio se ho la lista ['Ragazze', 'Digitali', 'Cesena', 'Giugno'] mi deve restituire un elemento random di questa lista).
+    \end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{L'impiccato - Parte 3}
+
+\begin{block}{E' il vostro turno!}
+Crea una funzione, dandole il nome che preferisci, che ci servira' per mostrare a video il 'campo di gioco'
+In particolare la funzione dovra':
+    \begin{itemize}
+        \item Prendere come parametri la stringa contenente le lettere sbagliate inserite dal giocatore, la stringa contenente le lettere corrette inserite dal giocatore e la parola da indovinare
+        \item Stampare a video l'immagine dell'impiccato corrispondente al numero di errori commessi, presa dalla lista HANGMAN\_PICS creata in precedenza, 
+        
+        Ad esempio: se il giocatore ha commesso 0 errori stampera' l'immagine alla posizione 0 della lista HANGMAN\_PICS, se ha commesso 1 errore stampera' l'immagine alla posizione 1 e cosi' via..
+        \item Stampare a video tutte le lettere sbagliate inserite dal giocatore
+    \end{itemize}
+\end{block}
+
+Vedi esempio alla pagina sucessiva
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{L'impiccato - Parte 3}
+
+\begin{lstlisting}
+  +---+
+  O   |
+ /|\  |
+ / \  |
+     ===
+
+Lettere sbagliate: a b c d f h 
+\end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{L'impiccato - Parte 4}
+
+\begin{block}{E' il vostro turno!}
+All'interno della funzione creata nella Parte 3 aggiungi
+    \begin{itemize}
+        \item una lista inizialmente vuota, dandole il nome che preferisci. Questa sara' una variabile locale della funzione nella quale scriveremo o le lettere inserite corretamente dal giocatore oppure dei '\_'
+        \item un ciclo for che, per un numero di volte pari alla lunghezza della parola segreta da indovinare, aggiunga alla lista creata nel punto precedente o la lettera della parola segreta (se presente tra le lettere indovinate) oppure il carattere '\_' [aiuto: utilizza la funzione append('a')]
+        
+        Esempio: Se la parola da indovinare e' 'ciao' e ho inserito correttamente le lettere 'i o' il risultato dovra' essere ['\_', 'i', '\_', 'o']
+        \item Stampa a video la lista appena creata e popolata dalle lettere corrette inserite oppure dai '\_'
+    \end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{L'impiccato - Parte 5}
+
+\begin{block}{E' il vostro turno!}
+Crea una funzione, chiamandola playAgain(), che chieda all'utente se vuole giocare di nuovo e restituisca, con return, la risposta (similmente a come abbiamo visto in precedenza con l'esempio per chiedere il nome)
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{L'impiccato - Parte 6}
+
+\begin{block}{Leggi la parte finale del codice fornito}
+    \begin{itemize}
+        \item Che cosa fa il while?
+        \item A che cosa ci serve la variabile play?
+        \item Che differenza c'e' con il while dentro alla funzione getGuess()?
+    \end{itemize}
+\end{block}
+\end{frame}
