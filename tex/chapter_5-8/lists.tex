@@ -65,6 +65,21 @@ answers.append('Forse') # Ora answers avra' valori ['Si', 'No', 'Forse']
 
 \begin{frame}[fragile]
 \frametitle{Liste}
+    \begin{block}{reverse()}
+La funzione reverse() inverte l'ordine degli elementi di una lista, modificando la lita stessa!
+
+! Si, la lista e' ordinata !
+    \end{block}
+
+    \begin{lstlisting}
+vocals = ['a', 'e', 'i', 'o', 'u']
+vocals.reverse() # ['u', 'o', 'i', 'e', 'a']
+    \end{lstlisting}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Liste}
     \begin{block}{Lista vuota}
 Adesso che conosciamo append() possiamo anche crearci delle lista vuote e all'occorrenza aggiungere valori
     \end{block}
@@ -73,6 +88,16 @@ Adesso che conosciamo append() possiamo anche crearci delle lista vuote e all'oc
 answers = []
 answers.append('Si')
 answers.append('No')
+    \end{lstlisting}
+
+    \begin{block}{Lista piena}
+Utilizzando la funzione remove() possiamo rimuovere dei valori
+    \end{block}
+    
+    \begin{lstlisting}
+days = [10, 11, 12, 13, 14]
+days.remove(12)
+print(days) # [10, 11, 13, 14]
     \end{lstlisting}
 
     \begin{block}{reverse()}
@@ -87,6 +112,7 @@ vocals.reverse() # ['u', 'o', 'i', 'e', 'a']
     \end{lstlisting}
 
 \end{frame}
+
 
 \begin{frame}[fragile]
 \frametitle{Liste}
@@ -169,7 +195,19 @@ list('Ciao') # ['C', 'i', 'a', 'o']
     
     \begin{lstlisting}
     vocals = ['a', 'e', 'i', 'o', 'u']
-    'e' in vocals # True
-    'g' in vocals # False
+    'e' in vocals # ???
+    'g' in vocals # ???
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Liste}
+    \begin{block}{len(vocals)}
+    La funzione \textbf{len(vocals)} la lunghezza della lista di nome vocals.
+    \end{block}
+    
+    \begin{lstlisting}
+    vocals = ['a', 'e', 'i', 'o', 'u']
+    len(vocals) # ???
     \end{lstlisting}
 \end{frame}
