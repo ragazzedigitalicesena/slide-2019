@@ -5,11 +5,11 @@
     \begin{block}{}
         \begin{itemize}
             \item Abbiamo già visto e usato alcune funzioni, ad esempio: print('ciao'), input(), randint(1, 20), ecc..
-            \item Possiamo anche crearne noi!
+            \item Anche noi possiamo crearle!
             \item Con le funzioni possiamo incapsulare del codice e riutilizzarlo più volte nel nostro programma.
         \end{itemize}
     \end{block}
-    
+
     \begin{block}{Una funzione}
         \begin{itemize}
             \item Deve essere dichiarata \textbf{prima} di essere chiamata
@@ -36,7 +36,7 @@
    				\includegraphics[height=2cm]{images/function_signature_example.png}
 			\end{figure}
 		\end{column}
-		
+
 		\begin{column}{6cm}
             \begin{lstlisting}
 def displayIntro():
@@ -56,7 +56,7 @@ def displayIntro():
             \item Meglio se le nostre funzioni sono corte, con poco codice
             \item  Con 1 funzione facciamo 1 cosa soltanto!
             \item Evitiamo di usare più di 1 o 2 parametri in una funzione
-            
+
             Se abbiamo bisogno di più parametri dividiamo quello che vogliamo fare in più funzioni
         \end{itemize}
     \end{block}
@@ -70,22 +70,22 @@ def displayIntro():
             \item Queste informazioni ci serviranno per elaborare il risultato della funzione
         \end{itemize}
     \end{block}
-    
+
     \begin{lstlisting}
                           # O ancora meglio..
-def isPositive(number): | def isPositive(number): 
+def isPositive(number): | def isPositive(number):
     if number > 0 :     |    return number > 0
         return True     |
     else:               |
         return False    |
     \end{lstlisting}
-    
+
     \begin{lstlisting}
 # Usiamo la funzione, ad esempio, in questo modo
 print(isPositive(5))    # True
 print(isPositive(-5))   # False
     \end{lstlisting}
-    
+
 \end{frame}
 
 \begin{frame}[fragile]
@@ -97,16 +97,16 @@ print(isPositive(-5))   # False
             \item Il risultato verrà restituito utilizzando la keyword \textbf{return}
         \end{itemize}
     \end{block}
-    
+
     \begin{lstlisting}
-def sum(firstNumber, secondNumber): 
+def sum(firstNumber, secondNumber):
     return firstNumber + secondNumber
     \end{lstlisting}
-    
+
     \begin{lstlisting}
 # Usiamo la funzione, ad esempio, in questo modo
 result = sum(5, 4)    # result avra' valore 9
 result = sum(-10, 5)  # result avra' valore -5
     \end{lstlisting}
-    
+
 \end{frame}
