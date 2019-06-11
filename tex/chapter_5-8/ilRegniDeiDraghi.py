@@ -29,11 +29,17 @@ def check(answerP, friendlyC):
 
 
 
-printIntro()
-answer = playerChoice()
-printChoice( answer )
-time.sleep(2)
+playAgain = 'yes'
 
-friendlyCave = random.randint(1,2)
-check(answer, friendlyCave)
+while playAgain == 'yes' or playAgain == 'y':
 
+    printIntro()
+    answer = playerChoice()
+    printChoice( answer )
+    time.sleep(2)
+
+    friendlyCave = random.randint(1,2)
+    check(answer, friendlyCave)
+
+    print('Do you want to play again? (yes or no)')
+    playAgain = input()
