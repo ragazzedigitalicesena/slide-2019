@@ -200,10 +200,10 @@ Vedremo che ci saranno utili in seguito!
 		\begin{lstlisting}
 # Set up the colors.
 BLACK = (0, 0, 0)
-WHITE = (255, 255, 255)
+WHITE = (?, ?, ?)
 RED = (255, 0, 0)
-GREEN = (0, 255, 0)
-BLUE = (0, 0, 255)
+GREEN = (?, ?, ?)
+BLUE = (?, ?, ?)
 		\end{lstlisting}
 	\end{column}
 	\begin{column}[T]{0.45\textwidth}
@@ -216,19 +216,27 @@ BLUE = (0, 0, 255)
 
 \begin{frame}[fragile]
 \frametitle{Tuple e colori 3/3}
+\begin{block}{Colori}
+	\begin{itemize}
+		\item Ogni numero della tupla rappresenta la "quantità" di ciascun colore, che può andare da 0 a 255.
+		\item Il primo numero rappresenta la quantità di rosso, il secondo la quantità di verde e il terzo quella del blu.
+	\end{itemize}
+\end{block}
 \begin{columns}[T]
-	\begin{column}[T]{0.55\textwidth}
-		\begin{figure}[t]
-			\includegraphics[height=5cm, width=6cm]{images/TabellaColori.png}
-		\end{figure}
+	\begin{column}[T]{0.5\textwidth}
+		\begin{lstlisting}
+# Set up the colors.
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
+		\end{lstlisting}
 	\end{column}
-	\begin{column}[T]{0.45\textwidth}
-		\begin{block}{Colori}
-			\begin{itemize}
-				\item Ogni numero della tupla rappresenta la "quantità" di ciascun colore, che può andare da 0 a 255.
-				\item Il primo numero, quindi, rappresenta la quantità di rosso, il secondo la quantità di verde e il terzo quella del blu.
-			\end{itemize}
-		\end{block}
+	\begin{column}[T]{0.5\textwidth}
+		\begin{figure}[t]
+			\includegraphics[height=4.5cm, width=6cm]{images/TabellaColori.png}
+		\end{figure}
 	\end{column}
 \end{columns}
 \end{frame}
@@ -448,6 +456,7 @@ Con questo semplice metodo riusciamo a rendere visibile sul nostro display tutto
 	\begin{itemize}
 		\item Un evento è qualcosa che accade all'interno del nostro programma, come un click o movimento del mouse o la pressione di un tasto.
 		\item Possiamo intercettare gli eventi tramite la funzione \texttt{get()}, mentre il valore \texttt{type} (a cui accediamo tramite \texttt{event.type}) indica il tipo di evento di cui si tratta.
+		\item L'\texttt{if} contenuto nel game loop intercetta l'evento di uscita e se si verifica, vengono invocati i metodi \texttt{pygame.quit()} e \texttt{sys.exit()}.
 	\end{itemize}
 \end{block}
 \begin{lstlisting}
@@ -459,6 +468,170 @@ while True:
             sys.exit()
 \end{lstlisting}
 \end{frame}
+
+\section{Primo giochino con animazioni}
+
+\begin{frame}[fragile]
+\frametitle{Animazioni}
+Costruiremo un programma nel quale 3 quadrati colorati diversamente che si muoveranno all'interno della finestra. Ogni quadratino si muoverà in diagonale in una delle 4 direzioni. Se si scontra con un bordo della finestra, rimbalzerà in un'altra direzione, come mostrato in figura sotto.
+\begin{columns}
+	\begin{column}[T]{0.5\textwidth}
+		\begin{figure}[t]
+			\includegraphics[height=3cm, width=4cm]{images/animazioni.png}
+		\end{figure}
+	\end{column}
+	\begin{column}[T]{0.5\textwidth}
+		\begin{itemize}
+			\item In quale direzione si muoverà il quadratino? Da cosa dipende?
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Animazioni}
+Costruiremo un programma nel quale 3 quadrati colorati diversamente che si muoveranno all'interno della finestra. Ogni quadratino si muoverà in diagonale in una delle 4 direzioni. Se si scontra con un bordo della finestra, rimbalzerà in un'altra direzione, come mostrato in figura sotto.
+\begin{columns}
+	\begin{column}[T]{0.5\textwidth}
+		\begin{figure}[t]
+			\includegraphics[height=3cm, width=4cm]{images/animazioni.png}
+		\end{figure}
+	\end{column}
+	\begin{column}[T]{0.5\textwidth}
+		\begin{itemize}
+			\item In quale direzione si muoverà il quadratino? Da cosa dipende?
+			\textbf{1)} Dalla direzione in cui si muoveva prima di rimbalzare; \\
+			\textbf{2)} In che muro ha rimbalzato.
+		\end{itemize}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Setting delle costanti delle figure}
+\lstset{basicstyle=\tiny}
+	\begin{lstlisting}
+import pygame, sys, time
+from pygame.locals import *
+# Set up pygame.
+pygame.init()
+# Set up the window.
+WINDOWWIDTH = 400
+WINDOWHEIGHT = 400
+windowSurface = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT), 0, 32)
+pygame.display.set_caption('Animation')
+# Set up direction variables.
+DOWNLEFT = 'downleft'
+DOWNRIGHT = 'downright'
+UPLEFT = 'upleft'
+UPRIGHT = 'upright'
+MOVESPEED = 4
+# Set up the colors.
+WHITE = (?, ?, ?)
+RED = (?, ?, ?)
+GREEN = (?, ?, ?)
+BLUE = (?, ?, ?)
+
+# Set up the box data structure.
+b1 = {'rect':pygame.Rect(300, 80, 50, 100), 'color':RED, 'dir':UPRIGHT}
+b2 = {'rect':pygame.Rect(200, 200, 20, 20), 'color':GREEN, 'dir':UPLEFT}
+b3 = {'rect':pygame.Rect(100, 150, 60, 60), 'color':BLUE, 'dir':DOWNLEFT}
+boxes = [b1, b2, b3]
+	\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Game Loop 1/3}
+\lstset{basicstyle=\tiny}
+\begin{columns}
+	\begin{column}[T]{0.5\textwidth}
+		\begin{lstlisting}
+while True:
+    # Check for the QUIT event.
+    for ? in ?:
+		?
+		
+    # Draw the white background onto the surface.
+    windowSurface.fill(WHITE)
+    
+    for b in boxes:
+    # Move the box data structure.
+        if ? == ?:
+            ?
+        if ? == ?:
+            ?
+        if ? == ?:
+            ?
+        if ? == ?:
+            ?
+		
+		\end{lstlisting}
+	\end{column}
+	\begin{column}[T]{0.5\textwidth}
+		All'interno del secondo \texttt{for}, inseriamo una serie di controlli che permettono alle figure di muoversi.\\
+		\begin{itemize}
+		\item \textbf{SE} la direzione è \texttt{DOWNLEFT} o \texttt{DOWNRIGHT}, va \textit{incrementato} l'attributo \texttt{top};
+		\item \textbf{SE} la direzione è \texttt{UPLEFT} o \texttt{UPRIGHT,}, va \textit{decrementato} l'attributo \texttt{top};
+		\item \textbf{SE} la direzione è \texttt{DOWNRIGHT} o \texttt{UPRIGHT,}, va \textit{incrementato} l'attributo \texttt{lef};
+		\item \textbf{SE} la direzione è \texttt{DOWNLEFT} o \texttt{UPLEFT,}, va \textit{decrementato} l'attributo \texttt{left};
+		\end{itemize}
+		
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Game Loop 2/3}
+\lstset{basicstyle=\tiny}
+\begin{columns}
+	\begin{column}[T]{0.5\textwidth}
+		\begin{lstlisting}
+        if b['rect'].top < 0:
+            # The box has moved past the top.
+            ?
+		
+        if b['rect'].bottom > WINDOWHEIGHT:
+            # The box has moved past the bottom.
+            ?
+		
+        if b['rect'].left < 0:
+            # The box has moved past the left side.
+            ?
+		
+        if b['rect'].right > WINDOWWIDTH:
+            # The box has moved past the right side.
+            ?
+		
+		\end{lstlisting}
+	\end{column}
+	\begin{column}[T]{0.5\textwidth}
+		Sempre all'interno del secondo \texttt{for}, inseriamo una serie di controlli che permettono alle figure di "rimbalzare" nel caso in cui si scontrino con il bordo.\\
+		\begin{itemize}
+			\item \textbf{SE} ha toccato il bordo superiore, se era \texttt{UPLEFT} o \texttt{UPRIGHT}, diventerò \texttt{DOWNLEFT} o \texttt{DOWNRIGHT}
+			\item \textbf{SE} ha toccato quello inferiore, \texttt{UPLEFT} o \texttt{UPRIGHT} diventeranno \texttt{UPLEFT} o \texttt{UPRIGHT}
+			\item \textbf{SE} ha toccato quello destro, cosa succederà? E quello sinistro?
+		\end{itemize}
+		
+	\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Game Loop 3/3}
+		\begin{lstlisting}
+        # Draw the box onto the surface.
+        pygame.draw.rect(windowSurface, b['color'], b['rect'])
+		
+    # Draw the window onto the screen.
+    pygame.display.update()
+    time.sleep(0.02)
+		\end{lstlisting}
+		Ultime righe di questo codice che permettono di disegnare ogni rettangolo nella nuova posizione. \\Occhio che questa la prima funzione è inserita nel \texttt{for}, mentre le ultime due sono fuori dal \texttt{for} ma sempre dentro il game loop.\\
+		La funzione \texttt{display.update()} serve per aggiornare la nostra finestra, in modo che sia visibile lo spostamento delle figure!
+\end{frame}
+
 
 \begin{frame}
 
@@ -472,5 +645,6 @@ while True:
 	\includegraphics[height=0.8cm]{images/cc.jpeg}
 \end{center}
 
-\end{frame}	
+\end{frame}
+	
 \end{document}
