@@ -1,9 +1,0 @@
-\frametitle{Othello game 6/6}
-\begin{block}{Ora tocca a te!}
-	\begin{itemize}
-		\item \textbf{\#9} Creare una nuova griglia (\textit{board}) nella quale inserire la configurazione iniziale delle pedine (come nella prima figura mostrata alla slide \textbf{22})
-		\item \textbf{\#10} Inserire un meccanismo per cui, se lo score del computer è maggiore di quello dell'utente, viene stampato un messaggio di perdita stampando il punteggio.\\
-		Se, invece, l'utente ha ottenuto un punteggio superiore del computer, viene stampato un messaggio di vittoria.\\
-		Se, altrimenti, si è ottenuto un punteggio pari, si stampi un altri messaggio inerente.
-	\end{itemize}
-\end{block}

@@ -164,7 +164,7 @@ La \textbf{chiave} del Caeser chiper è il numero di lettere shiftate.
 
 \end{frame}
 
-\section{Metodi string.len() e string.isdigit()}
+\section{Metodo len()}
 
 \begin{frame}[fragile]
 \frametitle{len()}
@@ -173,34 +173,16 @@ La \textbf{chiave} del Caeser chiper è il numero di lettere shiftate.
 		\item E' un metodo che restituisce il numero di caratteri presenti nella stringa passata in input
 		\item Proviamo a vedere con degli esempi come funziona
 	\end{itemize}
-\end{block}
+
 	\begin{lstlisting}
 SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 MAX_KEY_SIZE = len(SYMBOLS)
 	\end{lstlisting}	
 	\begin{itemize}
-		\item In questo esempio, la variabile globale \texttt{SYMBOLS} contiene una stringa rappresentante tutte le lettere dell'alfabeto.
-		\item La variabile globale \texttt{MAX\_KEY\_SIZE}, invece, contiene il risultato della chiamata alla funzione \textbf{len()} invocata con parametro la stringa di cui vogliamo calcolare la lunghezza
-	\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{isdigit()}
-\begin{block}{Come funziona}
-	\begin{itemize}
-		\item E' un metodo che restituisce \texttt{True} se la stringa sul quale è invocato, contiene solo numeri. Restituisce \texttt{False} altrimenti.
-		\item Proviamo a vedere con degli esempi come funziona
+		\item In questo esempio, la costante \texttt{SYMBOLS} contiene una stringa rappresentante tutte le lettere dell'alfabeto.
+		\item La costante \texttt{MAX\_KEY\_SIZE}, invece, contiene il risultato della chiamata alla funzione \textbf{len()} invocata con parametro la stringa di cui vogliamo calcolare la lunghezza
 	\end{itemize}
 \end{block}
-	\begin{lstlisting}
->>> '42'.isdigit()
->>> 'forty'.isdigit()
->>> ''.isdigit()
->>> 'hello'.isdigit()
->>> x = '10'
->>> x.isdigit()
-	\end{lstlisting}	
-Copiamo una riga alla volta nella shell di Python e osserviamo cosa accade per ognuna di esse.
 \end{frame}
 
 \section{Funzione bool()}
@@ -290,7 +272,7 @@ translated = '' # inizializziamo a nullo il vettore che conterra' la stringa fin
 \begin{frame}[fragile]
 \frametitle{Othello game 1/6}
 Conosciamo già tutti gli strumenti per poter creare l'\textbf{Othello game}, o Reversegam game.\\
-A questo \href{https://raw.githubusercontent.com/ragazzedigitalicesena/slide-2019/master/tex/chapter_14-15/reversegam_da_completare.py}{link} troverete il codice sorgente nel quale mancano delle parti, che inserirete seguendo le indicazioni delle prossime slide.
+A questo \href{https://raw.githubusercontent.com/ragazzedigitalicesena/slide-2019/master/tex/chapter_14-15/reversegam.py}{link} troverete il codice sorgente nel quale mancano delle parti, che inserirete seguendo le indicazioni delle prossime slide.
 \end{frame}
 
 \begin{frame}[fragile]
@@ -372,18 +354,4 @@ Il gioco si svolge su una griglia 8x8 e due giocatori con due pedine diverse (ne
 	\end{itemize}
 \end{block}
 \end{frame}
-
-\begin{frame}
-
-\begin{center}
-	\bigskip
-	Materiale rilasciato con licenza
-	
-	\textbf{\href{http://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons - Attributions, Share-alike 4.0}}
-	
-	\medskip
-	\includegraphics[height=0.8cm]{images/cc.jpeg}
-\end{center}
-
-\end{frame}	
 \end{document}
