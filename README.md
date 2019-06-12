@@ -10,6 +10,8 @@
 
 12 giugno 2019 - [Capitoli 14-15](https://github.com/ragazzedigitalicesena/slide-2019/raw/master/pdf/capitolo_14-15_12_giugno.pdf)
 
+13 giugno 2019 - [Esercizi funzioni] (https://github.com/ragazzedigitalicesena/slide-2019/raw/master/pdf/esercizi_funzioni_13_giugno.pdf)
+
 13 giugno 2019 - [Capitoli 17-18](https://github.com/ragazzedigitalicesena/slide-2019/raw/master/pdf/capitolo_17-18_13_giugno.pdf)
 
 17 giugno 2019 - [Capitolo 19-20](https://github.com/ragazzedigitalicesena/slide-2019/raw/master/pdf/capitoli_19-20_17_giugno.pdf)
