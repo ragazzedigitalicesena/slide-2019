@@ -1,0 +1,160 @@
+\documentclass{beamer}
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{Madrid}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{beaver} % or try albatross, beaver, crane, ...
+  \usefonttheme{serif}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+}
+
+\usepackage{hyperref}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{pdfpages}
+\usepackage{framed, color}
+\definecolor{shadecolor}{rgb}{1,0.8,0.3}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\usepackage{listings}
+\lstset{language=Python,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+  frame=lrbt,xleftmargin=\fboxsep,xrightmargin=-\fboxsep
+}
+
+\title[Ragazze Digitali 2019]{Ragazze Digitali A.A. 2018/2019}
+\author{E. Salvucci - S. Gattucci - C. Varini}
+\date{}
+
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+\begin{document}
+
+\setbeamertemplate{background}
+{\includegraphics[width=\paperwidth,height=\paperheight]{images/ragazze_digitali.jpg}}
+\begin{frame}
+\end{frame}
+
+\setbeamertemplate{background}
+% Python
+
+\begin{frame}{Cosa faremo oggi}
+    \vspace{0.8cm}
+      Oggi faremo qualche esercizio per esercitarci ad utilizzare i costrutti e le funzioni che abbiamo visto fino ad ora!
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Esercizi 1/3}
+	\begin{block}{Ora prova tu!}
+		\textbf{1)} Crea una funzione che chiamerai come vuoi tu, che estragga un numero casuale e lo restituisca.\\
+		Chiama poi questa funzione e stampa il numero estratto insieme ad un messaggio dell'utente.\\
+		\textbf{2)} Crea una funzione che, dati due parametri in ingresso, restituisca il massimo tra i due. \\
+		Chiama poi questa funzione passandogli due numeri che vuoi tu!\\
+		\textbf{3)} Creare una funzione che, dati come parametri due numeri, stampi tutti i numeri compresi tra i due\\
+
+	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Esercizi 2/3}
+\begin{block}{Ora prova tu!}
+	\textbf{4)} Dichiara una variabile globale che contiene la stringa \textit{Il cane mangia dalla ciotola}.\\ Dichiarare poi una funzione restituisce il numero di vocali presenti nella stringa dichiarata globalmente.\\
+	Fuori dalla funzione poi, salva il risultato in una variabile e stampa il risultato con un messaggio
+
+	\textbf{5)} Modifica poi la funzione appena scritta eliminando la variabile globale e passando come argomento la stringa della quale calcolare il numero delle vocali.\\
+	\textbf{6)} Crea una funzione simile alla funzione precedente che conterà il numero di consonanti all'interno della variabile globale.\\
+	Fuori dalla funzione, salvare il risultato in una variabile e stampare una stringa che dica all'utente se la frase contiene più vocali o più consonanti.\\
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Esercizi 3/3}
+\begin{block}{Ora prova tu!}
+	\textbf{7)}  Crea una funzione che prenda un numero in input (chiedendolo all'utente) e stampi a video se questo numero è pari o dispari.\\
+	\textbf{CONSIGLIO} l'operatore \% restituisce il resto della divisione tra il numero e 2.\\
+	Es: 10\%2 = 0\\
+	Es: 7\%2 = 1\\
+	\textbf{8)} Crea una funzione che restituisce il contrario della stringa passata come parametro.\\
+	Es: cane -$>$ enac\\
+	\textbf{9)} Creare una funzione che, data come parametro una stringa, restituisca la stessa nella quale sono stati eliminati tutti gli spazi\\
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Esercizi sulle Liste}
+\begin{block}{Implementa}
+	\textbf{1)} Crea una variabile globale ``myList'' e \texitinizializzala  lista vuota e ass.\\
+
+	\textbf{5)} Modifica poi la funzione appena scritta eliminando la variabile globale e passando come argomento la stringa della quale calcolare il numero delle vocali.\\
+	\textbf{6)} Crea una funzione simile alla funzione precedente che conterà il numero di consonanti all'interno della variabile globale.\\
+	Fuori dalla funzione, salvare il risultato in una variabile e stampare una stringa che dica all'utente se la frase contiene più vocali o più consonanti.\\
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Esercizi sulle Liste}
+\begin{block}{Ora prova tu!}
+  \textbf{1)}Crea una variabile globale "names" e \textit{inizializzala} con una stringa formata da 3 nomi separati da uno spazio. \\
+	\textbf{2)}Crea una variabile globale "myList" e \textit{inizializzala} con names presi come Lista e non più come stringa. (usa la funzione split()). \\
+  \textbf{3)}Stampa la variabile myList. \\
+	\textbf{4)}Aggiungi al lista di prima i primi 3 nomi che ti vengono in mente (usa la funzione append()).\\
+  \textbf{5)}Stampa la variabile myList. \\
+	\textbf{6)}Crea una variabile globale "myListLen" e inizializzala con la langhezza della lista (usa la funzione len()). \\
+  \textbf{7)}Stampa la variabile myListLen.\\
+  \textbf{8)}Stampa il primo elemento della lista.\\
+  \textbf{9)}Stampa l'ultimo elemento della lista.\\
+  \textbf{10)}Stampa itutti gli elementi della lista.\\
+  \textbf{11)}Stampa itutti gli elementi della lista con accanto l'indice di ogni elemento.\\
+
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+
+\begin{center}
+	\bigskip
+	Materiale rilasciato con licenza
+
+	\textbf{\href{http://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons - Attributions, Share-alike 4.0}}
+
+	\medskip
+	\includegraphics[height=0.8cm]{images/cc.jpeg}
+\end{center}
+
+\end{frame}
+
+\end{document}
