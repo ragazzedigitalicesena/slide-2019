@@ -38,7 +38,7 @@ X_POSITION = 300
 Y_POSITION = 100
 PLAYER_WIDTH = 50
 PLAYER_HEIGHT = 50
-FOOD_SIZE = 20
+foodSize = 20
 player = pygame.Rect(X_POSITION , Y_POSITION, PLAYER_WIDTH, PLAYER_HEIGHT)
 pygame.draw.rect(windowSurface , BLACK , player)
 
@@ -52,7 +52,7 @@ moveDown = False
 
 MOVE_SPEED = 6
 
-food = pygame.Rect(random.randint(0, WINDOW_WIDTH - FOOD_SIZE), random.randint(0, WINDOW_HEIGHT - FOOD_SIZE), FOOD_SIZE, FOOD_SIZE)
+food = pygame.Rect(random.randint(0, WINDOW_WIDTH - foodSize), random.randint(0, WINDOW_HEIGHT - foodSize), foodSize, foodSize)
 
 # Run the game loop.
 while True:
@@ -90,6 +90,10 @@ while True:
             if event.key == K_x:
                 player.top = random.randint(0, WINDOW_HEIGHT - player.height)
                 player.left = random.randint(0, WINDOW_WIDTH - player.width)
+
+        if event.type == MOUSEBUTTONUP:
+            foodSize = foodSize + 5
+            food = pygame.Rect(food.x, food.y, foodSize, foodSize)
 
     windowSurface.fill(WHITE)
     pygame.draw.rect(windowSurface, BLACK, player)
