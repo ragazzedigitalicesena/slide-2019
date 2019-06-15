@@ -94,6 +94,15 @@ while True:
         if event.type == MOUSEBUTTONUP:
             foodSize = foodSize + 5
             food = pygame.Rect(food.x, food.y, foodSize, foodSize)
+        if event.type == MOUSEMOTION:
+            print(event.pos[0], event.pos[1])
+        if event.type == MOUSEBUTTONDOWN:
+            if event.button == 1:
+                print('Hai premuto il tasto sinistro del mouse')
+            elif event.button == 3: # elif significa else if. Sarebbe 'se, altrimenti se, altrimenti'
+                print('Hai premuto il tasto destro del mouse')
+            else:
+                print('Il tasto premuto è il', event.button)
 
     windowSurface.fill(WHITE)
     pygame.draw.rect(windowSurface, BLACK, player)
