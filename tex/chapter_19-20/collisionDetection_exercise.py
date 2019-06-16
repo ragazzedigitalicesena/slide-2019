@@ -1,40 +1,59 @@
-import pygame, sys, random 
+import pygame, sys, random
 from pygame.locals import *
 
 pygame.init()
-mainClock = pygame.time.Clock()
 
-WINDOWWIDTH = 400
-WINDOWHEIGHT = 400
-windowSurface = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT), 0, 32)
+mainClock = pygame.time.Clock()
+startTime = pygame.time.get_ticks()
+
+WINDOW_HEIGHT = 800
+WINDOW_WIDTH = 900
+windowSurface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
 pygame.display.set_caption('Input')
 
+X_POSITION = 0
+Y_POSITION = 0
+PLAYER_WIDTH = 50
+PLAYER_HEIGHT = 50
+
 BLACK = (0, 0, 0)
-GREEN = (0, 255, 0)
 WHITE = (255, 255, 255)
+GREEN = (0, 255, 0)
+RED = (255, 0, 0)
 
-foodCounter = 0
-NEWFOOD = 40
-player = pygame.Rect(300, 100, 50, 50)
+foodSize = 20
 
-# Da fare - Parte 1
+# windowSurface.fill(WHITE)
+windowSurfaceRectangle = windowSurface.get_rect()
+backgroundImage = pygame.image.load('background.png')
+backgroundStretchedImage = pygame.transform.scale(backgroundImage, (WINDOW_WIDTH, WINDOW_HEIGHT))
+
+player = pygame.Rect(X_POSITION, Y_POSITION, PLAYER_WIDTH, PLAYER_HEIGHT)
+food = pygame.Rect(random.randint(0, WINDOW_WIDTH - foodSize), random.randint(0, WINDOW_HEIGHT - foodSize), foodSize, foodSize)
+
+playerImage = pygame.image.load('pacman.png')
+playerStretchedImage = pygame.transform.scale(playerImage, (PLAYER_WIDTH, PLAYER_HEIGHT))
+
+foodImage = pygame.image.load('pizza.png')
+foodStretchedImage = pygame.transform.scale(foodImage, (foodSize, foodSize))
+
+print("food x:", food.x, "food y", food.y)
+
+pygame.display.update()
+
+MOVE_SPEED = 6
 
 moveLeft = False
 moveRight = False
 moveUp = False
 moveDown = False
 
-MOVESPEED = 6
-
 while True:
-    # Check for events.
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
         if event.type == KEYDOWN:
-
-            # Da fare - Parte 2 (da aggiungere alle righe seguenti)
             if event.key == K_LEFT:
                 moveRight = False
                 moveLeft = True
@@ -59,47 +78,49 @@ while True:
                 moveUp = False
             if event.key == K_DOWN:
                 moveDown = False
-             # Da fare - Parte 3
-
-        # Esempio di utilizzo di pos con MOUSEMOTION e di button con MOUSEBUTTONDOWN
         if event.type == MOUSEMOTION:
-            print("Positione" + str(event.pos))
+            print(event.pos[0], event.pos[1])
+        if event.type == MOUSEBUTTONUP:
+            foodSize = foodSize + 5
+            food = pygame.Rect(food.x, food.y, foodSize, foodSize)
+            foodStretchedImage = pygame.transform.scale(foodImage, (foodSize, foodSize))
+            # Aumentiamo di 5 la dimensione di'food'
         if event.type == MOUSEBUTTONDOWN:
-            print("Button" + str(event.button))
+            if event.button == 1:
+                print('Hai premuto il tasto sinistro del mouse')
+            elif event.button == 3:
+                print('Hai premuto il tasto destro del mouse')
+            else:
+                print("Hai premuto il tasto", event.button)
 
 
-        # Da fare - Parte 4
-
-    foodCounter += 1
-    if foodCounter >= NEWFOOD:
-        foodCounter = 0
-        foods.append(pygame.Rect(random.randint(0, WINDOWWIDTH - FOODSIZE), random.randint(0, WINDOWHEIGHT - FOODSIZE), FOODSIZE, FOODSIZE))
-
-    windowSurface.fill(WHITE)
-
-    if moveDown and player.bottom < WINDOWHEIGHT:
-        player.top += MOVESPEED
+    if moveDown and player.bottom < WINDOW_HEIGHT:
+        player.top = player.top + MOVE_SPEED
+        print("moving down", player.top, player.bottom, player.right, player.left)
     if moveUp and player.top > 0:
-        player.top -= MOVESPEED
-    # Da fare - Parte 5
-    # Aggiungere il movimento verso sinistra e verso destra.
-    # Ricorda che posso muovermi verso sinistra se non ho ancora raggiunto il margine sinistro della finestra,
-    # quindi se player.left ...?
-    # Mi posso muovere verso destra se player.right < ...?
+        player.top = player.top - MOVE_SPEED
+        print("moving up", player.top, player.bottom, player.right, player.left)
+    if moveLeft and player.left > 0:
+        player.left = player.left - MOVE_SPEED
+        print("moving left", player.top, player.bottom, player.right, player.left)
+    if moveRight and player.right < WINDOW_WIDTH:
+        player.right = player.right + MOVE_SPEED
+        print("moving right", player.top, player.bottom, player.right, player.left)
 
-    pygame.draw.rect(windowSurface, BLACK, player)
+#    windowSurface.fill(WHITE)
+    windowSurface.blit(backgroundStretchedImage, windowSurfaceRectangle)
 
-    new_foods = foods
-    for food in new_foods:
-        if player.colliderect(food):
-            foods.remove(food)
-    new_foods = []
+    windowSurface.blit(playerStretchedImage, player)
+    windowSurface.blit(foodStretchedImage, food)
+#    pygame.draw.rect(windowSurface , BLACK, player)
+#    pygame.draw.rect(windowSurface, GREEN, food)
 
-    for i in range(len(foods)):
-        # Da fare - 6
-        # mostrare a video i rettangoli "food" presenti nella lista foods.
+    if player.colliderect(food):
+        # Faccio qualcosa.
+        pygame.draw.rect(windowSurface, RED, food)
 
     pygame.display.update()
-    mainClock.tick(40)
 
-    # Da fare - Parte 7
+    mainClock.tick(40)
+    elapsedTime = pygame.time.get_ticks()
+    print('Tempo trascorso:', int(((elapsedTime - startTime)/1000)), " secondi")
