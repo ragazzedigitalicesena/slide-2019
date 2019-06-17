@@ -14,7 +14,7 @@
 
 14-17 giugno 2019 - [Capitoli 17-18](https://github.com/ragazzedigitalicesena/slide-2019/raw/master/pdf/capitolo_17-18_17_giugno.pdf)
 
-17 giugno 2019 - ["HelloWorldPygame.py"](https://github.com/ragazzedigitalicesena/slide-2019/raw/master/tex/chapter_17-18/pygame_HelloWorld.py)
+17 giugno 2019 - [HelloWorldPygame.py](https://github.com/ragazzedigitalicesena/slide-2019/raw/master/tex/chapter_17-18/pygame_HelloWorld.py)
 
 17 giugno 2019 - [Capitolo 19-20](https://github.com/ragazzedigitalicesena/slide-2019/raw/master/pdf/capitoli_19-20_17_giugno.pdf)
 
