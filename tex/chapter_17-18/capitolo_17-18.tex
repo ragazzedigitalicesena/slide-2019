@@ -545,7 +545,7 @@ boxes = [b1, b2, b3]
 \frametitle{Game Loop 1/3}
 \lstset{basicstyle=\tiny}
 \begin{columns}
-	\begin{column}[T]{0.5\textwidth}
+	\begin{column}[T]{0.4 \textwidth}
 		\begin{lstlisting}
 while True:
     # Check for the QUIT event.
@@ -567,14 +567,14 @@ while True:
             ?
 		
 		\end{lstlisting}
-	\end{column}
-	\begin{column}[T]{0.5\textwidth}
 		All'interno del secondo \texttt{for}, inseriamo una serie di controlli che permettono alle figure di muoversi.\\
+	\end{column}
+	\begin{column}[T]{0.6\textwidth}
 		\begin{itemize}
-		\item \textbf{SE} la direzione è \texttt{DOWNLEFT} o \texttt{DOWNRIGHT}, va \textit{incrementato} l'attributo \texttt{top};
-		\item \textbf{SE} la direzione è \texttt{UPLEFT} o \texttt{UPRIGHT,}, va \textit{decrementato} l'attributo \texttt{top};
-		\item \textbf{SE} la direzione è \texttt{DOWNRIGHT} o \texttt{UPRIGHT,}, va \textit{incrementato} l'attributo \texttt{lef};
-		\item \textbf{SE} la direzione è \texttt{DOWNLEFT} o \texttt{UPLEFT,}, va \textit{decrementato} l'attributo \texttt{left};
+		\item \textbf{SE} la direzione è \texttt{DOWNLEFT} o \texttt{DOWNRIGHT}, va \textit{incrementato} l'attributo \texttt{top} di una quantità pari alla velocità di movimento;
+		\item \textbf{SE} la direzione è \texttt{UPLEFT} o \texttt{UPRIGHT,}, va \textit{decrementato} l'attributo \texttt{top} di una quantità pari alla velocità di movimento;
+		\item \textbf{SE} la direzione è \texttt{DOWNRIGHT} o \texttt{UPRIGHT,}, va \textit{incrementato} l'attributo \texttt{left} di una quantità pari alla velocità di movimento;
+		\item \textbf{SE} la direzione è \texttt{DOWNLEFT} o \texttt{UPLEFT,}, va \textit{decrementato} l'attributo \texttt{left} di una quantità pari alla velocità di movimento;
 		\end{itemize}
 		
 	\end{column}
@@ -587,30 +587,31 @@ while True:
 \begin{columns}
 	\begin{column}[T]{0.5\textwidth}
 		\begin{lstlisting}
-        if b['rect'].top < 0:
-            # The box has moved past the top.
-            ?
+    if b['rect'].top < 0:
+        # The box has moved past the top.
+        ?
 		
-        if b['rect'].bottom > WINDOWHEIGHT:
-            # The box has moved past the bottom.
-            ?
+    if b['rect'].bottom > WINDOWHEIGHT:
+        # The box has moved past the bottom.
+        ?
 		
-        if b['rect'].left < 0:
-            # The box has moved past the left side.
-            ?
+    if b['rect'].left < 0:
+        # The box has moved past the left side.
+        ?
 		
-        if b['rect'].right > WINDOWWIDTH:
-            # The box has moved past the right side.
-            ?
+    if b['rect'].right > WINDOWWIDTH:
+        # The box has moved past the right side.
+        ?
 		
 		\end{lstlisting}
+		Sempre all'interno del secondo \texttt{for}, inseriamo una serie di controlli che permettono alle figure di "rimbalzare" nel caso in cui si scontrino con il bordo.\\
 	\end{column}
 	\begin{column}[T]{0.5\textwidth}
-		Sempre all'interno del secondo \texttt{for}, inseriamo una serie di controlli che permettono alle figure di "rimbalzare" nel caso in cui si scontrino con il bordo.\\
+		
 		\begin{itemize}
-			\item \textbf{SE} ha toccato il bordo superiore, se era \texttt{UPLEFT} o \texttt{UPRIGHT}, diventerò \texttt{DOWNLEFT} o \texttt{DOWNRIGHT}
-			\item \textbf{SE} ha toccato quello inferiore, \texttt{UPLEFT} o \texttt{UPRIGHT} diventeranno \texttt{UPLEFT} o \texttt{UPRIGHT}
-			\item \textbf{SE} ha toccato quello destro, cosa succederà? E quello sinistro?
+			\item \textbf{SE} ha toccato il bordo superiore, se la direzione era \texttt{UPLEFT} diventerà \texttt{DOWNLEFT}, se era   \texttt{UPRIGHT}, diventerà  \texttt{DOWNRIGHT}
+			\item \textbf{SE} ha toccato quello inferiore, se la direzione era  \texttt{DOWNLEFT} diventerà \texttt{UPLEFT}, se era \texttt{DOWNRIGHT} diventerà \texttt{UPRIGHT}
+			\item \textbf{SE} ha toccato quello destro, cosa quale sarà la nuova direzione? E quello sinistro?
 		\end{itemize}
 		
 	\end{column}

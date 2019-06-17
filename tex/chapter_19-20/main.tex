@@ -65,23 +65,7 @@
 \begin{frame}
 \end{frame}
 
-\setbeamertemplate{background}
-{\includegraphics[width=\paperwidth,height=\paperheight]{images/pacman.jpg}}
-\begin{frame}
-\frametitle{Cosa faremo oggi}
-
-\end{frame}
-
 \setbeamertemplate{background}{}
-
-\begin{frame}
-\frametitle{Cosa faremo oggi}
-Nel programma che faremo oggi il giocatore usera' le freccie della tastiera per muovere un quadrato nero (il nostro pacman) a destra, sinistra, in alto e in basso.
-
-Ci saranno degli altri quadrati verdi (il cibo) che appariranno in posizioni casuali e che verranno "mangiati" dal quadrato nero quando questo li tocchera'.
-
-Con il tasto ESC potremo uscire dal gioco e con il tasto X potremo teletrasportare il quadrato nero in una posizione random
-\end{frame}
 
 \section{Disegnamo la finestra di gioco e gli elementi al suo interno}
 
@@ -89,9 +73,9 @@ Con il tasto ESC potremo uscire dal gioco e con il tasto X potremo teletrasporta
     \frametitle{La finestra di gioco}
     
     \begin{lstlisting}
-WINDOWWIDTH = 400
-WINDOWHEIGHT = 400
-windowSurface = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT), 0, 32)
+WINDOW_WIDTH = 400
+WINDOW_HEIGHT = 400
+windowSurface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
 pygame.display.set_caption('Input')
     \end{lstlisting}
     
@@ -152,10 +136,33 @@ pygame.display.set_caption('Input')
     \begin{lstlisting}
 X_POSITION = 300
 Y_POSITION = 100
-WIDTH = 50
-HEIGHT = 50
+PLAYER_WIDTH = 50
+PLAYER_HEIGHT = 50
 player = pygame.Rect(X_POSITION, Y_POSITION, 
-                     WIDTH, HEIGHT)
+                     PLAYER_WIDTH, PLAYER_HEIGHT)
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{pygame.Rect(...)}
+    Creiamo un altro rettangolo, come abbiamo fatto per player. Questa volta piu' piccolo.
+    \begin{block}{Come possiamo fare per...}
+dare al nuovo rettangolo una posizione (X, Y) random?
+
+Cosa devo scrivere al posto dei ??? (ricordiamoci di aggiungere import random all'inizio del nostro file)
+    \end{block}
+    \begin{lstlisting}
+foodSize = 20
+# In questo caso non e' una costante perche' dopo voglio modificarne il valore 
+food = pygame.Rect(???, ???, foodSize, foodSize)
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Qual e' la posizione (x, y) di food?}
+
+    \begin{lstlisting}
+print(food.x, food.y)
     \end{lstlisting}
 \end{frame}
 
@@ -195,23 +202,24 @@ moveDown = False
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Gestire l'evento KEYDOWN}
+\frametitle{Gestire l'evento KEYDOWN (dentro il while True:)}
 Se l'evento scatenato e' KEYDOWN allora l'evento stesso ha un attributo chiamato "key" che indica quale tasto e' stato premuto.
 
 \begin{lstlisting}
-if event.type == KEYDOWN:
-    if event.key == K_LEFT:
-        moveRight = False
-        moveLeft = True
-    if event.key == K_RIGHT:
-        moveLeft = False
-        moveRight = True
-    if event.key == K_UP:
-        moveDown = False
-        moveUp = True
-    if event.key == K_DOWN:
-        moveUp = False
-        moveDown = True
+for event in pygame.event.get():
+    if event.type == KEYDOWN:
+        if event.key == K_LEFT:
+            moveRight = False
+            moveLeft = True
+        if event.key == K_RIGHT:
+            moveLeft = False
+            moveRight = True
+        if event.key == K_UP:
+            moveDown = False
+            moveUp = True
+        if event.key == K_DOWN:
+            moveUp = False
+            moveDown = True
 \end{lstlisting}
     
 \end{frame}
@@ -243,28 +251,6 @@ if event.type == KEYUP:
 \end{lstlisting}
 \end{frame}
 
-\section{Input da mouse}
-
-\begin{frame}[fragile]
-\frametitle{Input da mouse}
-    
-    \begin{block}{Gestire eventi del mouse}
-        \begin{itemize}
-            \item MOUSEMOTION: Evento generato quando il mouse si muove all'interno della nostra finestra
-            
-            Ha degli attributi. In particolare ci sara' utile \textbf{pos}: Indica la posizione del mouse all'interno della finestra. La posizione e' rappresentata come tupla (x, y) dove x e y sono le coordinate del mouse.
-            \item MOUSEBUTTONDOWN: Evento generato quando viene premuto un tasto del mouse all'interno della nostra finestra
-            
-            Ha degli attributi. In particolare ci sara' utile \textbf{button}: Indica quale tasto del mouse e' stato premuto.
-            
-            1 rappresenta il tasto sinistro, 2 il tasto centrale (se presente), 3 il tasto destro, 4 se la rotella e' stata mossa verso l'alto o 5 se mossa verso il basso.
-            
-            \item MOUSEBUTTONUP: Ha gli stessi attributi di MOUSEBUTTONDOWN.
-        \end{itemize}
-    \end{block}
-    
-\end{frame}
-
 \section{Muovere il giocatore}
 
 \begin{frame}[fragile]
@@ -275,28 +261,61 @@ Se una delle 4 variabili, moveDown, moveUp, moveLeft o moveRight ha valore True 
 
 In particolare possiamo muovere il giocatore verso l'alto se questo non e' gia' arrivato all'estremo superiore della finestra, in basso se non e' arrivato a quello inferiore e cosi' via..
 
-Per rappresentare il movimento cambieremo la posizione verso la quale ci vogliamo muovere aggiungendo o sottraendo un valore MOVESPEED (che rappresenta il quanto ci stiamo muovendo)
+Per rappresentare il movimento cambieremo la posizione verso la quale ci vogliamo muovere aggiungendo o sottraendo un valore MOVE_SPEED (che rappresenta il quanto ci stiamo muovendo)
 \end{block}
 
 \begin{lstlisting}
-if moveDown and player.bottom < WINDOWHEIGHT:
-        player.top += MOVESPEED
-    if moveUp and player.top > 0:
-        player.top -= MOVESPEED
+if moveDown and player.bottom < WINDOW_HEIGHT:
+    player.top = player.top + MOVE_SPEED
+if moveUp and player.top > 0:
+    player.top = player.top - MOVE_SPEED
 \end{lstlisting}
 \end{frame}
 
-\section{Disegnare il giocatore}
+\begin{frame}[fragile]
+\frametitle{Muovere il giocatore}
+
+\begin{block}{Muovere il giocatore}
+Per rappresentare il movimento cambieremo la posizione verso la quale ci vogliamo muovere aggiungendo o sottraendo un valore MOVE_SPEED (che rappresenta il quanto ci stiamo muovendo).
+
+Dobbiamo inizializzare la costante MOVE_SPEED (all'inizio del nostro programma, dove abbiamo inizializzato le altre costanti).
+\end{block}
+
+\begin{lstlisting}
+MOVE_SPEED = 6
+\end{lstlisting}
+\end{frame}
+
 
 \begin{frame}[fragile]
-\frametitle{Disegnare il giocatore}
+    \frametitle{Muovere il giocatore}
+
+    \begin{block}{Come possiamo fare per...}
+aggiungere il movimemnto verso destra e verso sinistra?
+Cosa devo scrivere al posto dei ???
+    \end{block}
+    \begin{lstlisting}
+if moveLeft and ???:
+    player.left ??? ???
+if moveRight and ???:
+    player.right ??? ???
+    \end{lstlisting}
+\end{frame}
+
+
+\section{Disegnare il giocatore e il cibo}
+
+\begin{frame}[fragile]
+\frametitle{Disegnare il giocatore e il cibo}
 
 Per adesso abbiamo solo detto, definendo player, quali sono le caratteristiche del nostro giocatore.
 
 Non lo abbiamo ancora disegnato e mostrato a video
 
 \begin{lstlisting}
+windowSurface.fill(WHITE) # A cosa serve qui?
 pygame.draw.rect(windowSurface, BLACK, player)
+pygame.draw.rect(windowSurface, GREEN, food)
 \end{lstlisting}
 
 \end{frame}
@@ -310,10 +329,22 @@ pygame.draw.rect(windowSurface, BLACK, player)
 Andiamo a rilevare le collisioni tra il giocatore (player) e i cibi (foods).
 Utilizziamo la funzione colliderect che verifica se due rettangoli si toccano.
 \end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Collision Detection}
+
+\begin{lstlisting}
+if player.colliderect(food):
+    # Faccio qualcosa.
+    pygame.draw.rect(windowSurface, RED, food)
+\end{lstlisting}
+
+O se avessimo tanti "cibi" memorizzati in una lista (foods)
 
 \begin{lstlisting}
 new_foods = foods
-for food in foods:
+for food in new_foods:
     if player.colliderect(food):
         foods.remove(food)
 new_foods = []
@@ -371,126 +402,147 @@ Proviamo a togliere la riga mainClock.tick(40)
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{E' il vostro turno}
+\frametitle{Clock}
 
-\begin{block}{E' il vostro turno!}
-Prendiamo come riferimento il codice al \href{https://raw.githubusercontent.com/ragazzedigitalicesena/slide-2019/master/tex/chapter_19-20/collisionDetection.py}{link}, potete copiarlo
-
-\href{https://raw.githubusercontent.com/ragazzedigitalicesena/slide-2019/master/tex/chapter_19-20/collisionDetection.py}{Download}
-
-\vspace{5mm}
-Completiamo il codice fornito secondo le indicazioni della pagine successive.
+\begin{block}{Clock}
+Creiamo ora un timer che tenga traccia del tempo trascorso e lo stampi sulla console
 \end{block}
 
+\begin{lstlisting}
+# All'inizio del nostro codice
+startTime = pygame.time.get_ticks()
+
+# Alla fine del nostro codice, come ultima riga del While True:
+elapsedTime = pygame.time.get_ticks()
+print('Tempo trascorso:',
+    int(((elapsedTime - startTime)/1000)))
+\end{lstlisting}
 \end{frame}
 
-\begin{frame}[fragile]
-\frametitle{E' il vostro turno - Parte 1}
-\begin{block}{E' il vostro turno!}
-    \begin{itemize}
-        \item Crea una variabile che contenga, inizialmente, una lista vuota (chiamandola foods)
-        \item Crea anche una costante chiamata FOODSIZE che rappresentera' sia la larghezza sia l'altezza del cibo (dandole il valore che preferisci, per il giocatore avevamo usato 50)
-    \end{itemize}{}
-\end{block}
-\end{frame}
+
+\section{Input da mouse}
 
 \begin{frame}[fragile]
-\frametitle{E' il vostro turno - Parte 1}
-\begin{block}{E' il vostro turno!}
-    \begin{itemize}
-        \item Con un ciclo for (che si ripeta 20 volte, aiuto: range(20)) aggiungiamo alla lista foods  (aiuto: append(..)) dei rettangoli che rappresenteranno i "cibi" del nostro gioco.
-        
-        Usiamo pygame.Rect(..) come visto nell'esempio con cui abbiamo creato il rettangolo per il giocatore.
-        
-        La larghezza e l'altezza del rettangolo sara' FOODSIZE.
-        \item Prima abbiamo usato X\_POSITION e Y\_POSITION per posizionare il rettangolo del giocatore. In questo caso usa un numero generato casualmente compreso tra 0 e la larghezza della finstra WINDOWWIDTH - FOODSIZE (con random.randint(..) come abbiamo visto)
-    \end{itemize}{}
-\end{block}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{E' il vostro turno - Parte 2}
-\begin{block}{E' il vostro turno!}
-    Abbiamo visto come gestire eventi generati dalla pressione e dal rilascio dei tasti su, giu, destra o sinistra.
+\frametitle{Input da mouse}
     
-    Dai la possibilita' all'utente di usare \textbf{anche} le lettere \textbf{W} per muoversi verso l'alte, \textbf{S} verso il basso, \textbf{A} verso sinistra e \textbf{D} verso destra (quindi o le frecce o le lettere).
+    \begin{block}{Gestire eventi del mouse}
+        \begin{itemize}
+            \item MOUSEMOTION: Evento generato quando il mouse si muove all'interno della nostra finestra
+            
+            Ha degli attributi. In particolare ci sara' utile \textbf{pos}: Indica la posizione del mouse all'interno della finestra. La posizione e' rappresentata come tupla (x, y) dove x e y sono le coordinate del mouse.
+            \item MOUSEBUTTONDOWN: Evento generato quando viene premuto un tasto del mouse all'interno della nostra finestra
+            
+            Ha degli attributi. In particolare ci sara' utile \textbf{button}: Indica quale tasto del mouse e' stato premuto.
+            
+            1 rappresenta il tasto sinistro, 2 il tasto centrale (se presente), 3 il tasto destro, 4 se la rotella e' stata mossa verso l'alto o 5 se mossa verso il basso.
+            
+            \item MOUSEBUTTONUP: Ha gli stessi attributi di MOUSEBUTTONDOWN.
+        \end{itemize}
+    \end{block}
+    
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Esempio di eventi provenienti dal mouse}
+Dentro al for event in pygame.event.get() (che si trova dentro al while True:)
+\begin{lstlisting}
+if event.type == MOUSEMOTION:
+    print(event.pos[0], event.pos[1])
+if event.type == MOUSEBUTTONUP:
+    # Aumentiamo di 5 la dimensione di'food'
+if event.type == MOUSEBUTTONDOWN:
+    if event.button == 1:
+        print('Hai premuto il tasto sinistro del mouse')
+    elif event.button == 3:
+        print('Hai premuto il tasto destro del mouse')
+    else:
+        print("Hai premuto il tasto", event.button)
+\end{lstlisting}
+\end{frame}
+
+\section{Immagini}
+
+\begin{frame}[fragile]
+\frametitle{Immagini}
+    Andiamo ora a sostituire il nostro quadrato nero (per il giocatore) e verde (per il cibo) rispettivamente con l'icona di pacman e un pezzo di pizza.
+    Imposteremo anche un'immagine di sfondo per il background del nostro gioco.
+    
+    \begin{block}{pygame.image.load(...)}
+        \begin{itemize}
+            \item prende come parametro una stringa con il nome dell'immagine.
+            \item ricordiamoci che l'immagine che vogliamo usare si deve trovare nella stessa cartella del nostro file python.
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Immagini}
+    \begin{block}{pygame.image.load(...)}
+        \begin{itemize}
+            \item Carica un'immagine a partire da un file specificato come parametro.
+            \item Prende come parametro una stringa con il nome dell'immagine.
+            \item Ricordiamoci che l'immagine che vogliamo usare si deve trovare nella stessa cartella del nostro file python.
+        \end{itemize}
+    \end{block}
     
     \begin{lstlisting}
-    event.key == K_w
-    # Per la pressione del tasto W
-    event.key == K_s
-    # Per la pressione del tasto S
-    event.key == K_a
-    # Per la pressione del tasto A
-    event.key == W_d
-    # Per la pressione del tasto D
+    backgroundImage = pygame.image.load('background.png')
+    playerImage = pygame.image.load('pacman.png')
+    foodImage = pygame.image.load('pizza.png')
     \end{lstlisting}
-\end{block}
+    \href{https://github.com/ragazzedigitalicesena/slide-2019/raw/master/tex/chapter_19-20/images/background.png}{Download background.png}
 
+    \href{https://github.com/ragazzedigitalicesena/slide-2019/raw/master/tex/chapter_19-20/images/pacman.png}{Download pacman.png}
+        
+    \href{https://github.com/ragazzedigitalicesena/slide-2019/raw/master/tex/chapter_19-20/images/pizza.png}{Download pizza.png}    
 \end{frame}
 
+% pygame.transform.scale
 \begin{frame}[fragile]
-\frametitle{E' il vostro turno - Parte 3}
-\begin{block}{E' il vostro turno!}
-    Ora vogliamo dare la possibilita' al giocatore di essere teletrasportato in una posione casuale alla pressione del tasto X
-    
-    Aggiungi la gestione dell'evento "pressione del tasto X" agli if di keyup.
+\frametitle{Immagini}
+    \begin{block}{pygame.transform.scale(image, (width, height))}
+        \begin{itemize}
+            \item Ridimensiona un'immagine
+            \item Prende come parametri
+                \begin{itemize}
+                    \item l'immagine da ridimensionare
+                    \item Una tupla (width, height) che rappresenta la larghezza e l'altezza desiderata per quell'immagine.
+                \end{itemize}{}
+        \end{itemize}
+    \end{block}
     
     \begin{lstlisting}
-# per teletrasportare il giocatore in una
-# posizione random usa, dentro all'if:
-player.top = random.randint(0, WINDOWHEIGHT - player.height)
-player.left = random.randint(0, WINDOWWIDTH - player.width)
+backgroundStretchedImage = pygame.transform.scale(backgroundImage, (WINDOW_WIDTH, WINDOW_HEIGHT))
+playerStretchedImage = pygame.transform.scale(playerImage, (PLAYER_WIDTH, PLAYER_HEIGHT))
+foodStretchedImage = pygame.transform.scale(foodImage, (foodSize, foodSize))
     \end{lstlisting}
-\end{block}
-
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{E' il vostro turno - Parte 4}
-\begin{block}{E' il vostro turno!}
-    Aggiungi un "cibo" nella posizione in cui si trovava il mouse al momento della pressione del tasto sinistro (la pressione in questo caso non ci interessa, ci interessa solo il rilascio MOUSEBUTTONUP)
+\frametitle{Immagini}
+    \begin{block}{Cosa faceva windowSurface.blit(...)???}
+Disegna un'immagine dentro una superficie (o una superficie dentro una superficie).
+
+Non ci servono piu' ne windowSurface.fill(WHITE) ne i due pygame.draw.rect(...)
+    \end{block}
+    
+    \begin{lstlisting}
+# windowSurface.fill(WHITE)
+windowSurface.blit(backgroundStretchedImage, windowSurfaceRectangle)
+windowSurface.blit(playerStretchedImage, player)
+windowSurface.blit(foodStretchedImage, food)
+#pygame.draw.rect(windowSurface, BLACK, player)
+#pygame.draw.rect(windowSurface, GREEN, food)
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}{Esempi}
+    \begin{center}
+        \href{https://raw.githubusercontent.com/ragazzedigitalicesena/slide-2019/master/tex/chapter_19-20/collisionDetection_exercise.py}{Con un solo food e le immagini - Download}
         
-    Lo si puo' fare prendendo spunto dall'esempio in cui abbiamo aggiunto i cibi in posizione random. In questo caso li aggiungeremo nella posizione del mouse (elementi 0 e 1 della lista event.pos[0]).
-\end{block}
-
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{E' il vostro turno - Parte 5}
-\begin{block}{E' il vostro turno!}
-Abbiamo visto come muovere il giocatore verso l'alto e verso il basso. Seguendo quell'esempio aggiungi il movimento verso sinistra e verso destra (le posizioni sinistra e destra del giocatore sono rispettivamente player.left e player.right) 
-\end{block}
-
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{E' il vostro turno - Parte 6}
-\begin{block}{E' il vostro turno!}
-Analogamente a come abbiamo disegnato e mostrato a video il quadrato del giocatore, mostra a video/disegna i quadrati di tutti i food presenti nella lista foods
-\end{block}
-
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{E' il vostro turno - Parte 7}
-\begin{block}{E' il vostro turno!}
-La funzione \textbf{ pygame.time.get\_ticks() } restituisce il tempo (in millisecondi) trascorso da quando e' stato avviato pygame (e quindi, nel nostro caso, il programma).
-
-\vspace{5mm}
-Come possiamo fare un countdown del tempo       ?
-Prova a farlo stampando il tempo con una print
-
-Ad esempio:
-\begin{itemize}
-    \item 10 s
-    \item 9 s
-    \item 8 s 
-    \item ...
-\end{itemize}
-\end{block}
-
-\end{frame}
+        \href{https://raw.githubusercontent.com/ragazzedigitalicesena/slide-2019/master/tex/chapter_19-20/collisionDetection_example.py}{Simile ma con una lista di cibi (foods) ma senza immagini - Download}
+    \end{center}
+\end{frame}{}
 
 \begin{frame}
 
