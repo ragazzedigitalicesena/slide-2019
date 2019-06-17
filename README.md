@@ -12,7 +12,7 @@
 
 13 giugno 2019 - [Esercizi funzioni e liste](https://github.com/ragazzedigitalicesena/slide-2019/blob/master/pdf/esercizi_funzioni_e_liste.pdf)
 
-13 giugno 2019 - [Capitoli 17-18](https://github.com/ragazzedigitalicesena/slide-2019/raw/master/pdf/capitolo_17-18_13_giugno.pdf)
+14-17 giugno 2019 - [Capitoli 17-18](https://github.com/ragazzedigitalicesena/slide-2019/raw/master/pdf/capitolo_17-18_17_giugno.pdf)
 
 17 giugno 2019 - [Capitolo 19-20](https://github.com/ragazzedigitalicesena/slide-2019/raw/master/pdf/capitoli_19-20_17_giugno.pdf)
 
