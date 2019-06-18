@@ -16,7 +16,9 @@
 
 17 giugno 2019 - [HelloWorldPygame.py](https://github.com/ragazzedigitalicesena/slide-2019/raw/master/tex/chapter_17-18/pygame_HelloWorld.py)
 
-17 giugno 2019 - [Capitolo 19-20](https://github.com/ragazzedigitalicesena/slide-2019/raw/master/pdf/capitoli_19-20_17_giugno.pdf)
+17-18 giugno 2019 - [Capitolo 19-20](https://github.com/ragazzedigitalicesena/slide-2019/raw/master/pdf/capitoli_19-20_17_giugno.pdf)
+
+18 giugno - [Intervento Sonia Montegiove su Software Libero e dati](https://github.com/ragazzedigitalicesena/slide-2019/raw/master/pdf/Ragazze%20Digitali%20Cesena%20-%20Sonia.pdf)
 
 24 giugno - ! Non ci sarà lezione !
 
