@@ -20,6 +20,8 @@
 
 18 giugno - [Intervento Sonia Montegiove su Software Libero e dati](https://github.com/ragazzedigitalicesena/slide-2019/raw/master/pdf/Ragazze%20Digitali%20Cesena%20-%20Sonia.pdf)
 
+19 giugno - [Capitolo 21](https://github.com/ragazzedigitalicesena/slide-2019/raw/master/pdf/capitolo_21.pdf)
+
 24 giugno - ! Non ci sarà lezione !
 
 28 giungo - Presentazione dei progetti ad amici e famiglie! (nel pomeriggio)
