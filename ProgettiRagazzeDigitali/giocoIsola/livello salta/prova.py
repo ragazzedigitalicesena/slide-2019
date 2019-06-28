@@ -1,0 +1,108 @@
+import pygame,sys
+from pygame.locals import*
+pygame.init()
+
+WINDOW_HEIGHT = 800
+WINDOW_WIDTH = 800
+windowSurface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
+BLACK=(255,0,0)
+
+def drawLabirinto():
+    pygame.draw.line(windowSurface,BLACK,(40 , 0),(40 , 40),3)
+    pygame.draw.line(windowSurface,BLACK,(0 , 80),(80 , 80),3)
+    pygame.draw.line(windowSurface,BLACK,(40 , 40),(120 , 40),3)
+    pygame.draw.line(windowSurface,BLACK,(120 , 40),(120 , 120),3)
+    pygame.draw.line(windowSurface,BLACK,(80 , 80),(80 , 160),3)
+    pygame.draw.line(windowSurface,BLACK,(120 , 120),(160 , 120),3)
+    pygame.draw.line(windowSurface,BLACK,(80 , 160),(210 , 160),3)
+    pygame.draw.line(windowSurface,BLACK,(200 , 120),(250 , 120),3)
+    pygame.draw.line(windowSurface,BLACK,(210 , 160),(210 , 190),3)
+    pygame.draw.line(windowSurface,BLACK,(250 , 120),(250 , 220),3)
+    pygame.draw.line(windowSurface,BLACK,(210 , 220),(210 , 260),3)
+    pygame.draw.line(windowSurface,BLACK,(250 , 220),(450 , 220),3)
+    pygame.draw.line(windowSurface,BLACK,(490 , 220),(560 , 220),3)
+    pygame.draw.line(windowSurface,BLACK,(210 , 260),(520 , 260),3)
+    pygame.draw.line(windowSurface,BLACK,(520 , 260),(520 , 300),3)
+    pygame.draw.line(windowSurface,BLACK,(560 , 220),(560 , 340),3)
+    pygame.draw.line(windowSurface,BLACK,(560 , 340),(390 , 340),3)
+    pygame.draw.line(windowSurface,BLACK,(520 , 300),(350 , 300),3)
+    pygame.draw.line(windowSurface,BLACK,(390 , 340),(390 , 380),3)
+    pygame.draw.line(windowSurface,BLACK,(390 , 420),(390 , 460),3)
+    pygame.draw.line(windowSurface,BLACK,(350 , 300),(350 , 420),3)
+    pygame.draw.line(windowSurface,BLACK,(350 , 460),(350 , 500),3)
+    pygame.draw.line(windowSurface,BLACK,(390 , 460),(470 , 460),3)
+    pygame.draw.line(windowSurface,BLACK,(470 , 460),(470 , 540),3)
+    pygame.draw.line(windowSurface,BLACK,(350 , 500),(430 , 500),3)
+    pygame.draw.line(windowSurface,BLACK,(430 , 500),(210 , 500),3)
+    pygame.draw.line(windowSurface,BLACK,(470 , 540),(250 , 540),3)
+    pygame.draw.line(windowSurface,BLACK,(210 , 500),(210 , 620),3)
+    pygame.draw.line(windowSurface,BLACK,(250 , 540),(250 , 580),3)
+    pygame.draw.line(windowSurface,BLACK,(250 , 580),(500 , 580),3)
+    pygame.draw.line(windowSurface,BLACK,(210 , 620),(540 , 620),3)
+    pygame.draw.line(windowSurface,BLACK,(540 , 620),(540 , 540),3)
+    pygame.draw.line(windowSurface,BLACK,(500 , 580),(500 , 500),3)
+    pygame.draw.line(windowSurface,BLACK,(500 , 500),(660 , 500),3)
+    pygame.draw.line(windowSurface,BLACK,(540 , 540),(620 , 540),3)
+    pygame.draw.line(windowSurface,BLACK,(660 , 500),(660 , 700),3)
+    pygame.draw.line(windowSurface,BLACK,(620 , 540),(620 , 660),3)
+    pygame.draw.line(windowSurface,BLACK,(620 , 660),(480 , 660),3)
+    pygame.draw.line(windowSurface,BLACK,(660 , 700),(520 , 700),3)
+    pygame.draw.line(windowSurface,BLACK,(520 , 700),(520 , 740),3)
+    pygame.draw.line(windowSurface,BLACK,(480 , 660),(480 , 780),3)
+    pygame.draw.line(windowSurface,BLACK,(520 , 740),(800 , 740),3)
+    pygame.draw.line(windowSurface,BLACK,(480 , 780),(760 , 780),3)
+    pygame.draw.line(windowSurface,BLACK,(800 , 740),(800 , 800),3)
+    pygame.draw.line(windowSurface,BLACK,(760 , 780),(760 , 800),3)
+   
+    
+    pygame.draw.line(windowSurface,BLACK,(160 , 120),(160 , 40),3)
+    pygame.draw.line(windowSurface,BLACK,(200 , 120),(200 , 80),3)
+    pygame.draw.line(windowSurface,BLACK,(160 , 40),(320 , 40),3)
+    pygame.draw.line(windowSurface,BLACK,(200 , 80),(280 , 80),3)
+    pygame.draw.line(windowSurface,BLACK,(320 , 40),(320 , 120),3)
+    pygame.draw.line(windowSurface,BLACK,(280 , 80),(280 , 160),3)
+    pygame.draw.line(windowSurface,BLACK,(280 , 160),(450 , 160),3)
+    pygame.draw.line(windowSurface,BLACK,(320 , 120),(450 , 120),3)
+    pygame.draw.line(windowSurface,BLACK,(490 , 120),(640 , 120),3)
+    pygame.draw.line(windowSurface,BLACK,(490 , 160),(600 , 160),3)
+    pygame.draw.line(windowSurface,BLACK,(600 , 160),(600 , 380),3)
+    pygame.draw.line(windowSurface,BLACK,(600 , 380),(390 , 380),3)
+    pygame.draw.line(windowSurface,BLACK,(640 , 120),(640 , 420),3)
+    pygame.draw.line(windowSurface,BLACK,(640 , 420),(390 , 420),3)
+ 
+    
+    pygame.draw.line(windowSurface,BLACK,(450 , 120),(450 , 40),3)
+    pygame.draw.line(windowSurface,BLACK,(490 , 120),(490 , 80),3)
+    pygame.draw.line(windowSurface,BLACK,(450 , 40),(720 , 40),3)
+    pygame.draw.line(windowSurface,BLACK,(490 , 80),(680 , 80),3)
+    pygame.draw.line(windowSurface,BLACK,(720 , 40),(720 , 740),3)
+    pygame.draw.line(windowSurface,BLACK,(680 , 80),(680 , 740),3)
+    
+    pygame.draw.line(windowSurface,BLACK,(450 , 160),(450 , 220),3)
+    pygame.draw.line(windowSurface,BLACK,(490 , 160),(490 , 220),3)
+    
+    pygame.draw.line(windowSurface,BLACK,(60 , 80),(60 , 190),3)
+    pygame.draw.line(windowSurface,BLACK,(60 , 190),(210 , 190),3)
+    pygame.draw.line(windowSurface,BLACK,(60 , 220),(60 , 480),3)
+    pygame.draw.line(windowSurface,BLACK,(20 , 80),(20 , 520),3)
+    pygame.draw.line(windowSurface,BLACK,(20 , 520),(60 , 520),3)
+    pygame.draw.line(windowSurface,BLACK,(100 , 520),(140 , 520),3)
+    pygame.draw.line(windowSurface,BLACK,(60 , 440),(140 , 480),3)
+    pygame.draw.line(windowSurface,BLACK,(140 , 480),(140 , 420),3)
+    pygame.draw.line(windowSurface,BLACK,(140 , 420),(550 , 420),3)
+    pygame.draw.line(windowSurface,BLACK,(140 , 420),(180 , 460),3)
+    pygame.draw.line(windowSurface,BLACK,(180 , 460),(180 , 700),3)
+    pygame.draw.line(windowSurface,BLACK,(140 , 120),(140 , 740),3)
+    pygame.draw.line(windowSurface,BLACK,(180 , 700),(300 , 700),3)
+    pygame.draw.line(windowSurface,BLACK,(140 , 740),(340 , 740),3)
+    pygame.draw.line(windowSurface,BLACK,(300 , 700),(300 , 620),3)
+    pygame.draw.line(windowSurface,BLACK,(340 , 740),(340 , 620),3)
+
+
+
+
+
+
+
+drawLabirinto()
+pygame.display.update()
